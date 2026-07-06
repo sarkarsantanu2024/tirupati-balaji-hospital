@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { navigationData, topBarLinks } from '@/data/navigation'
 import { useScrollY } from '@/hooks/useInView'
@@ -8,23 +8,10 @@ import { cn } from '@/lib/utils'
 
 export default function Header() {
   const scrollY = useScrollY()
-  const { mobileMenuOpen, activeDropdown, setMobileMenuOpen, setActiveDropdown } = useUIStore()
+  const { mobileMenuOpen, setMobileMenuOpen } = useUIStore()
   const { openModal } = useAppointmentStore()
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
-  const headerRef = useRef<HTMLDivElement>(null)
 
   const isScrolled = scrollY > 60
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
-        setActiveDropdown(null)
-      }
-    }
-    document.addEventListener('mousedown', handleClick)
-    return () => document.removeEventListener('mousedown', handleClick)
-  }, [setActiveDropdown])
 
   // Close mobile menu on resize
   useEffect(() => {
@@ -80,7 +67,6 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        ref={headerRef}
         className={cn(
           'sticky top-0 z-[100] transition-all duration-300',
           isScrolled
@@ -100,102 +86,17 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Nav — links disabled while only the home page is live */}
           <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center">
             {navigationData.map((item) => (
-              <div key={item.label} className="relative group">
-                {item.children || item.megaMenu ? (
-                  <button
-                    onMouseEnter={() => setActiveDropdown(item.label)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                    className={cn(
-                      'flex items-center gap-1 px-3 py-2 rounded-lg font-semibold text-sm transition-colors',
-                      activeDropdown === item.label
-                        ? 'text-primary-600 bg-primary-50'
-                        : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50'
-                    )}
-                  >
-                    {item.label}
-                    <span
-                      className={cn('material-symbols-outlined transition-transform', activeDropdown === item.label && 'rotate-180')}
-                      style={{ fontSize: 14 }}
-                    >expand_more</span>
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="flex items-center px-3 py-2 rounded-lg font-semibold text-sm text-neutral-700 hover:text-primary-600 hover:bg-primary-50 transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                )}
-
-                {/* Dropdown */}
-                {item.children && !item.megaMenu && (
-                  <div
-                    onMouseEnter={() => setActiveDropdown(item.label)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                    className={cn(
-                      'absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-card-hover border border-neutral-100 py-2 min-w-56 z-50 transition-all duration-200',
-                      activeDropdown === item.label
-                        ? 'opacity-100 translate-y-0 pointer-events-auto'
-                        : 'opacity-0 translate-y-2 pointer-events-none'
-                    )}
-                  >
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        onClick={() => setActiveDropdown(null)}
-                        className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
-                      >
-                        <div className="font-medium">{child.label}</div>
-                        {child.description && (
-                          <div className="text-xs text-neutral-400 mt-0.5">{child.description}</div>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-
-                {/* Mega Menu – Departments */}
-                {item.megaMenu && item.children && (
-                  <div
-                    onMouseEnter={() => setActiveDropdown(item.label)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                    className={cn(
-                      'absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl shadow-card-hover border border-neutral-100 z-50 w-[720px] p-6 transition-all duration-200',
-                      activeDropdown === item.label
-                        ? 'opacity-100 translate-y-0 pointer-events-auto'
-                        : 'opacity-0 translate-y-2 pointer-events-none'
-                    )}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <p className="text-xs font-bold uppercase tracking-widest text-secondary-500">All Departments</p>
-                      <Link
-                        href="/departments"
-                        onClick={() => setActiveDropdown(null)}
-                        className="text-xs text-primary-600 hover:text-primary-700 font-semibold"
-                      >
-                        View All →
-                      </Link>
-                    </div>
-                    <div className="grid grid-cols-3 gap-1">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          onClick={() => setActiveDropdown(null)}
-                          className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-600 transition-colors group/item"
-                        >
-                          <span className="text-base w-6 text-center">{child.icon}</span>
-                          <span className="font-medium">{child.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+              <span
+                key={item.label}
+                aria-disabled="true"
+                title="Coming soon"
+                className="flex items-center px-3 py-2 rounded-lg font-semibold text-sm text-neutral-400 cursor-not-allowed select-none"
+              >
+                {item.label}
+              </span>
             ))}
           </nav>
 
@@ -261,58 +162,16 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Mobile Nav Links */}
+          {/* Mobile Nav Links — disabled while only the home page is live */}
           <div className="flex-1 overflow-y-auto py-4">
             {navigationData.map((item) => (
               <div key={item.label} className="border-b border-neutral-50">
-                {item.children ? (
-                  <>
-                    <button
-                      onClick={() =>
-                        setMobileExpanded(mobileExpanded === item.label ? null : item.label)
-                      }
-                      className="flex items-center justify-between w-full px-5 py-3.5 text-neutral-800 font-semibold hover:bg-primary-50 transition-colors"
-                    >
-                      <span>{item.label}</span>
-                      <span
-                        className={cn('material-symbols-outlined transition-transform text-neutral-400', mobileExpanded === item.label && 'rotate-180')}
-                        style={{ fontSize: 16 }}
-                      >expand_more</span>
-                    </button>
-                    {mobileExpanded === item.label && (
-                      <div className="bg-neutral-50 px-4 pb-2">
-                        {item.children.slice(0, 10).map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="flex items-center gap-2 py-2 px-2 text-sm text-neutral-600 hover:text-primary-600 transition-colors"
-                          >
-                            {child.icon && <span>{child.icon}</span>}
-                            {child.label}
-                          </Link>
-                        ))}
-                        {item.children.length > 10 && (
-                          <Link
-                            href={item.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block py-2 px-2 text-sm text-primary-600 font-semibold"
-                          >
-                            View All {item.label} →
-                          </Link>
-                        )}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-5 py-3.5 text-neutral-800 font-semibold hover:bg-primary-50 hover:text-primary-600 transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                )}
+                <span
+                  aria-disabled="true"
+                  className="block px-5 py-3.5 text-neutral-400 font-semibold cursor-not-allowed select-none"
+                >
+                  {item.label}
+                </span>
               </div>
             ))}
           </div>

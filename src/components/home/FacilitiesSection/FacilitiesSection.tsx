@@ -18,7 +18,7 @@ const iconMap: Record<string, string> = {
 
 export default function FacilitiesSection() {
   return (
-    <section className="section-padding bg-neutral-50">
+    <section className="section-padding bg-primary-50/50">
       <div className="container-custom">
         <div className="text-center mb-12">
           <SectionLabel align="center">Multi-Specialty Facilities</SectionLabel>

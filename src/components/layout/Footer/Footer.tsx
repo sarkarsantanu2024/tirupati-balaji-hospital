@@ -64,13 +64,13 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-neutral-400 hover:text-accent-400 transition-colors flex items-center gap-1.5 group"
+                  <span
+                    aria-disabled="true"
+                    className="text-sm text-neutral-500 flex items-center gap-1.5 cursor-not-allowed select-none"
                   >
-                    <span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-accent-400 transition-colors" />
+                    <span className="w-1 h-1 rounded-full bg-neutral-600" />
                     {link.label}
-                  </Link>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -82,22 +82,22 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {departmentsData.slice(0, 10).map((dept) => (
                 <li key={dept.slug}>
-                  <Link
-                    href={`/departments/${dept.slug}`}
-                    className="text-sm text-neutral-400 hover:text-accent-400 transition-colors flex items-center gap-1.5 group"
+                  <span
+                    aria-disabled="true"
+                    className="text-sm text-neutral-500 flex items-center gap-1.5 cursor-not-allowed select-none"
                   >
-                    <span className="w-1 h-1 rounded-full bg-neutral-600 group-hover:bg-accent-400 transition-colors" />
+                    <span className="w-1 h-1 rounded-full bg-neutral-600" />
                     {dept.name}
-                  </Link>
+                  </span>
                 </li>
               ))}
               <li>
-                <Link
-                  href="/departments"
-                  className="text-sm text-primary-400 hover:text-primary-300 font-semibold transition-colors"
+                <span
+                  aria-disabled="true"
+                  className="text-sm text-primary-400/60 font-semibold cursor-not-allowed select-none"
                 >
                   View All Departments →
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
@@ -153,8 +153,8 @@ export default function Footer() {
             Crafted with <span className="material-symbols-outlined text-red-500" style={{ fontSize: 13, fontVariationSettings: "'FILL' 1" }}>favorite</span> for better health
           </p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+            <span aria-disabled="true" className="cursor-not-allowed select-none">Privacy Policy</span>
+            <span aria-disabled="true" className="cursor-not-allowed select-none">Terms of Use</span>
           </div>
         </div>
       </div>

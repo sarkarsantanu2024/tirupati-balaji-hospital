@@ -7,7 +7,7 @@ export const diagnosticServicesData: DiagnosticService[] = [
     id: 'ds-1',
     title: '3 Tesla MRI',
     description: 'Our 3T MRI scanner delivers unparalleled soft tissue contrast and resolution for neurological, musculoskeletal, abdominal, and cardiac imaging. Studies are reported by board-certified radiologists within 2–4 hours of scanning.',
-    image: 'https://images.unsplash.com/photo-1584036561584-b03c19da874c?w=800&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80&fit=crop',
     bullets: ['Brain & spine MRI', 'MR Angiography', 'Whole-body MRI', 'Prostate MRI', 'Cardiac MRI'],
   },
   {
@@ -35,7 +35,7 @@ export const diagnosticServicesData: DiagnosticService[] = [
     id: 'ds-5',
     title: 'Pathology & Microbiology',
     description: 'Our NABL-accredited laboratory processes over 2,000 samples daily across haematology, biochemistry, microbiology, immunology, histopathology, and cytology with rigorous quality control and ISO-standard reporting.',
-    image: 'https://images.unsplash.com/photo-1582560474992-385c0e49a0d9?w=800&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&q=80&fit=crop',
     bullets: ['Haematology (CBC, ESR)', 'Biochemistry (LFT, RFT, lipid profile)', 'Microbiology cultures & sensitivity', 'Histopathology & FNAC', 'Tumour markers & hormones'],
   },
   {
