@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
 import SectionLabel from '@/components/ui/SectionLabel'
 import { faqData } from '@/data/home'
 import { cn } from '@/lib/utils'
@@ -23,10 +22,10 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
         <span className={cn('font-semibold text-base', isOpen ? 'text-primary-700' : 'text-neutral-800')}>
           {question}
         </span>
-        <ChevronDown
-          size={20}
-          className={cn('shrink-0 text-neutral-400 transition-transform duration-300', isOpen && 'rotate-180 text-primary-500')}
-        />
+        <span
+          className={cn('material-symbols-outlined shrink-0 text-neutral-400 transition-transform duration-300', isOpen && 'rotate-180 text-primary-500')}
+          style={{ fontSize: 20 }}
+        >expand_more</span>
       </button>
       <div className={cn(
         'overflow-hidden transition-all duration-300',

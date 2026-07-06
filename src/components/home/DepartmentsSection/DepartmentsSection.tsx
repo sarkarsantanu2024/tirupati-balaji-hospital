@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
 import { featuredDepartments, departmentsData } from '@/data/departments'
@@ -19,7 +18,7 @@ export default function DepartmentsSection() {
             </h2>
           </div>
           <Button href="/departments" variant="ghost">
-            View All 22 Departments <ArrowRight size={16} />
+            View All 22 Departments <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
           </Button>
         </div>
 
@@ -48,7 +47,7 @@ export default function DepartmentsSection() {
               <div className="p-5 flex-1 flex flex-col">
                 <p className="text-neutral-500 text-sm leading-relaxed mb-4 flex-1">{dept.shortDesc}</p>
                 <span className="inline-flex items-center gap-1 text-primary-600 font-semibold text-sm group-hover:gap-2 transition-all">
-                  Learn More <ArrowRight size={14} />
+                  Learn More <span className="material-symbols-outlined" style={{ fontSize: 14 }}>arrow_forward</span>
                 </span>
               </div>
             </Link>

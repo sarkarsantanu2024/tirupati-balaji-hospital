@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { CheckCircle2, Star } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
@@ -60,7 +59,7 @@ export default function HealthPackagesPage() {
                         ? 'bg-accent-500 text-white'
                         : 'bg-primary-100 text-primary-700'
                     )}>
-                      {pkg.highlight && <Star size={10} className="inline mr-1" />}
+                      {pkg.highlight && <span className="material-symbols-outlined inline mr-1" style={{ fontSize: 10 }}>star</span>}
                       {pkg.badge}
                     </span>
                   )}
@@ -86,7 +85,7 @@ export default function HealthPackagesPage() {
                   <ul className="space-y-2.5">
                     {pkg.includes.map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
-                        <CheckCircle2 size={15} className={cn('shrink-0 mt-0.5', pkg.highlight ? 'text-secondary-500' : 'text-secondary-400')} />
+                        <span className={cn('material-symbols-outlined shrink-0 mt-0.5', pkg.highlight ? 'text-secondary-500' : 'text-secondary-400')} style={{ fontSize: 15 }}>check_circle</span>
                         <span className="text-sm text-neutral-700">{item}</span>
                       </li>
                     ))}

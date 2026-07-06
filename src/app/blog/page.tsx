@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, Tag, ArrowRight } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import { blogPosts, blogCategories } from '@/data/blog'
 import { formatDate } from '@/lib/utils'
@@ -49,12 +48,12 @@ export default function BlogPage() {
               </h2>
               <p className="text-neutral-500 leading-relaxed mb-6 text-sm">{featured.excerpt}</p>
               <div className="flex items-center gap-4 text-xs text-neutral-400 mb-6">
-                <span className="flex items-center gap-1"><Clock size={12} /> {featured.readTime} min read</span>
+                <span className="flex items-center gap-1"><span className="material-symbols-outlined" style={{ fontSize: 12 }}>schedule</span> {featured.readTime} min read</span>
                 <span>{formatDate(featured.publishedAt)}</span>
                 <span>By {featured.author}</span>
               </div>
               <span className="inline-flex items-center gap-2 text-primary-600 font-bold text-sm group-hover:gap-3 transition-all">
-                Read Article <ArrowRight size={15} />
+                Read Article <span className="material-symbols-outlined" style={{ fontSize: 15 }}>arrow_forward</span>
               </span>
             </div>
           </Link>
@@ -98,7 +97,7 @@ export default function BlogPage() {
                   <p className="text-neutral-500 text-sm leading-relaxed mb-4 line-clamp-2">{post.excerpt}</p>
 
                   <div className="flex items-center gap-3 text-xs text-neutral-400 mt-auto pt-4 border-t border-neutral-100">
-                    <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime} min</span>
+                    <span className="flex items-center gap-1"><span className="material-symbols-outlined" style={{ fontSize: 11 }}>schedule</span> {post.readTime} min</span>
                     <span>{formatDate(post.publishedAt)}</span>
                   </div>
                 </div>

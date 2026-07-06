@@ -1,7 +1,6 @@
 'use client'
 import { useState, useMemo } from 'react'
 import Image from 'next/image'
-import { Search, Calendar, Filter } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import { doctorsData } from '@/data/doctors'
 import { departmentsData } from '@/data/departments'
@@ -36,7 +35,7 @@ export default function FindADoctorPage() {
       <section className="bg-white border-b border-neutral-100 py-6 sticky top-[64px] z-40 shadow-sm">
         <div className="container-custom flex flex-col sm:flex-row gap-4">
           <div className="relative flex-1 max-w-md">
-            <Search size={17} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400" />
+            <span className="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 17 }}>search</span>
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -45,7 +44,7 @@ export default function FindADoctorPage() {
             />
           </div>
           <div className="relative">
-            <Filter size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400" />
+            <span className="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 16 }}>filter_list</span>
             <select
               value={selectedDept}
               onChange={(e) => setSelectedDept(e.target.value)}
@@ -119,7 +118,7 @@ export default function FindADoctorPage() {
                           onClick={() => openModal({ doctor: doctor.slug, department: doctor.departmentSlug })}
                           className="w-full flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
                         >
-                          <Calendar size={15} />
+                          <span className="material-symbols-outlined" style={{ fontSize: 15 }}>calendar_today</span>
                           Book Appointment
                         </button>
                       </div>

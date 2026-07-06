@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import { departmentsData } from '@/data/departments'
 
@@ -45,7 +44,7 @@ export default function DepartmentsPage() {
                 <div className="p-4 flex-1 flex flex-col">
                   <p className="text-neutral-500 text-sm leading-relaxed flex-1 mb-3">{dept.shortDesc}</p>
                   <span className="inline-flex items-center gap-1 text-primary-600 font-semibold text-sm group-hover:gap-2 transition-all">
-                    Learn More <ArrowRight size={13} />
+                    Learn More <span className="material-symbols-outlined" style={{ fontSize: 13 }}>arrow_forward</span>
                   </span>
                 </div>
               </Link>

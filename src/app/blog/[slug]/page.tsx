@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, Calendar, ArrowLeft, Tag } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import { getBlogPostBySlug, blogPosts } from '@/data/blog'
 import { formatDate } from '@/lib/utils'
@@ -50,8 +49,8 @@ export default function BlogPostPage({ params }: Props) {
 
               {/* Meta */}
               <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-400 mb-6 pb-6 border-b border-neutral-100">
-                <span className="flex items-center gap-1.5"><Calendar size={14} /> {formatDate(post.publishedAt)}</span>
-                <span className="flex items-center gap-1.5"><Clock size={14} /> {post.readTime} min read</span>
+                <span className="flex items-center gap-1.5"><span className="material-symbols-outlined" style={{ fontSize: 14 }}>calendar_today</span> {formatDate(post.publishedAt)}</span>
+                <span className="flex items-center gap-1.5"><span className="material-symbols-outlined" style={{ fontSize: 14 }}>schedule</span> {post.readTime} min read</span>
                 <span className="bg-primary-50 text-primary-700 text-xs font-bold px-3 py-1 rounded-full">{post.category}</span>
               </div>
 
@@ -87,7 +86,7 @@ export default function BlogPostPage({ params }: Props) {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mt-8 pt-6 border-t border-neutral-100">
-                <Tag size={14} className="text-neutral-400 mt-1" />
+                <span className="material-symbols-outlined text-neutral-400 mt-1" style={{ fontSize: 14 }}>sell</span>
                 {post.tags.map((tag) => (
                   <span key={tag} className="bg-neutral-100 text-neutral-600 text-xs font-medium px-3 py-1.5 rounded-full border border-neutral-200">
                     {tag}
@@ -99,7 +98,7 @@ export default function BlogPostPage({ params }: Props) {
                 href="/blog"
                 className="inline-flex items-center gap-2 mt-8 text-primary-600 font-semibold text-sm hover:gap-3 transition-all"
               >
-                <ArrowLeft size={15} /> Back to Blog
+                <span className="material-symbols-outlined" style={{ fontSize: 15 }}>arrow_back</span> Back to Blog
               </Link>
             </article>
 

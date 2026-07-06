@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { CheckCircle2 } from 'lucide-react'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
 
@@ -38,7 +37,7 @@ export default function AboutSection() {
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
               {highlights.map((h) => (
                 <li key={h} className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-secondary-500 fill-secondary-50 shrink-0" />
+                  <span className="material-symbols-outlined text-secondary-500 shrink-0" style={{ fontSize: 17, fontVariationSettings: "'FILL' 1" }}>check_circle</span>
                   <span className="text-sm font-medium text-neutral-700">{h}</span>
                 </li>
               ))}

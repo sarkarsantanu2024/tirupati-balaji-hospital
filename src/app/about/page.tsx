@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { CheckCircle2, Award } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import SectionLabel from '@/components/ui/SectionLabel'
 import { aboutData } from '@/data/about'
@@ -42,7 +41,7 @@ export default function AboutPage() {
                     key={h}
                     className="inline-flex items-center gap-1.5 bg-primary-50 text-primary-700 text-sm font-semibold px-4 py-2 rounded-full border border-primary-100"
                   >
-                    <CheckCircle2 size={14} />
+                    <span className="material-symbols-outlined" style={{ fontSize: 14 }}>check_circle</span>
                     {h}
                   </span>
                 ))}
@@ -149,7 +148,7 @@ export default function AboutPage() {
             {technology.map((t) => (
               <div key={t.name} className="flex items-start gap-4 bg-neutral-50 rounded-2xl p-5 border border-neutral-100 hover:border-primary-200 hover:shadow-sm transition-all">
                 <div className="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center shrink-0">
-                  <Award size={18} className="text-primary-600" />
+                  <span className="material-symbols-outlined text-primary-600" style={{ fontSize: 18 }}>emoji_events</span>
                 </div>
                 <div>
                   <h4 className="font-bold text-neutral-800 text-sm mb-1">{t.name}</h4>

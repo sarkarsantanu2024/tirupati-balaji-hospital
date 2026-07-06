@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Calendar } from 'lucide-react'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
 import { featuredDoctors } from '@/data/doctors'
@@ -17,7 +16,7 @@ export default function DoctorsSection() {
             </h2>
           </div>
           <Button href="/find-a-doctor" variant="ghost">
-            View All Doctors <ArrowRight size={16} />
+            View All Doctors <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
           </Button>
         </div>
 
@@ -59,7 +58,7 @@ export default function DoctorsSection() {
 
               {/* Book button */}
               <button className="inline-flex items-center gap-1 text-xs text-primary-600 border border-primary-200 rounded-full px-3 py-1.5 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all font-semibold group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600">
-                <Calendar size={11} />
+                <span className="material-symbols-outlined" style={{ fontSize: 11 }}>calendar_today</span>
                 Book
               </button>
             </Link>

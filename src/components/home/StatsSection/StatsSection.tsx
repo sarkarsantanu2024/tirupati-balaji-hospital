@@ -1,24 +1,23 @@
 'use client'
 import { useRef } from 'react'
 import CountUp from 'react-countup'
-import { Award, Stethoscope, Activity, Heart } from 'lucide-react'
 import { statsData } from '@/data/home'
 import { useInView } from '@/hooks/useInView'
 import type { StatItem } from '@/types'
 
-const iconMap: Record<string, React.ElementType> = {
-  award: Award,
-  stethoscope: Stethoscope,
-  activity: Activity,
-  heart: Heart,
+const iconMap: Record<string, string> = {
+  award: 'emoji_events',
+  stethoscope: 'stethoscope',
+  activity: 'monitoring',
+  heart: 'favorite',
 }
 
 function StatCard({ stat, triggerCount }: { stat: StatItem; triggerCount: boolean }) {
-  const Icon = iconMap[stat.icon] ?? Award
+  const iconName = iconMap[stat.icon] ?? 'emoji_events'
   return (
     <div className="text-center group">
       <div className="w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-500 transition-colors duration-300 border border-white/20">
-        <Icon size={28} className="text-white" />
+        <span className="material-symbols-outlined text-white" style={{ fontSize: 28 }}>{iconName}</span>
       </div>
       <div className="flex items-end justify-center gap-1 mb-1">
         <span className="text-4xl md:text-5xl font-black text-white counter-value tabular-nums">
