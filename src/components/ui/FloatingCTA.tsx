@@ -1,9 +1,19 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { topBarLinks } from '@/data/navigation'
 
 export default function FloatingCTA() {
   const [showNumbers, setShowNumbers] = useState(false)
+  const [showTop, setShowTop] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 400)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
     <div className="fixed right-4 bottom-6 z-[90] flex flex-col items-end gap-3">
@@ -56,6 +66,17 @@ export default function FloatingCTA() {
       >
         <span className="material-symbols-outlined" style={{ fontSize: 24 }}>phone</span>
       </button>
+
+      {/* Back to Top Button */}
+      {showTop && (
+        <button
+          onClick={scrollToTop}
+          className="w-14 h-14 rounded-2xl bg-neutral-800 hover:bg-neutral-900 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 animate-in fade-in slide-in-from-bottom-2"
+          aria-label="Back to top"
+        >
+          <span className="material-symbols-outlined" style={{ fontSize: 26 }}>keyboard_arrow_up</span>
+        </button>
+      )}
     </div>
   )
 }

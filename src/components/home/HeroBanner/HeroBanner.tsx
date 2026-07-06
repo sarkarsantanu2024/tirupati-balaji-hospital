@@ -60,7 +60,8 @@ export default function HeroBanner({ slides }: HeroBannerProps) {
         onSwiper={(swiper) => {
           // Re-init navigation after refs are available
           setTimeout(() => {
-            if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+            if (swiper.destroyed) return
+            if (swiper.params?.navigation && typeof swiper.params.navigation !== 'boolean') {
               swiper.params.navigation.prevEl = prevRef.current
               swiper.params.navigation.nextEl = nextRef.current
               if (swiper.navigation) {

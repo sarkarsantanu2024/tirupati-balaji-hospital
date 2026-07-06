@@ -170,7 +170,7 @@ export const diagnosticServicesHome: DiagnosticService[] = [
     id: 'diag-1',
     title: '3T MRI (3 Tesla)',
     description: 'Our 3 Tesla MRI scanner delivers exceptional image clarity, enabling precise detection of brain tumours, spinal injuries, joint pathologies, and abdominal abnormalities. The scan is fast, non-invasive, and radiation-free, making it suitable for patients of all ages.',
-    image: 'https://images.unsplash.com/photo-1584036561584-b03c19da874c?w=800&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80&fit=crop',
     bullets: [
       'Brain & spine imaging',
       'Cardiac MRI',

@@ -6,7 +6,7 @@ import { featuredDepartments, departmentsData } from '@/data/departments'
 
 export default function DepartmentsSection() {
   return (
-    <section className="section-padding bg-neutral-50">
+    <section className="section-padding bg-primary-50/50">
       <div className="container-custom">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
@@ -39,7 +39,6 @@ export default function DepartmentsSection() {
                   sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 via-primary-900/20 to-transparent" />
-                <div className="absolute top-4 left-4 text-3xl">{dept.icon}</div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-white font-bold text-lg leading-tight">{dept.name}</h3>
                 </div>

@@ -35,12 +35,10 @@ export const useAppointmentStore = create<AppointmentState>((set) => ({
   isOpen: false,
   prefillDoctor: undefined,
   prefillDepartment: undefined,
-  openModal: (prefill) =>
-    set({
-      isOpen: true,
-      prefillDoctor: prefill?.doctor,
-      prefillDepartment: prefill?.department,
-    }),
+  // Modal popups are disabled for now — openModal is a no-op so the appointment
+  // modal never renders (keeps triggers harmless, avoids scroll-lock). Restore the
+  // original body to re-enable.
+  openModal: () => {},
   closeModal: () =>
     set({ isOpen: false, prefillDoctor: undefined, prefillDepartment: undefined }),
 }))
