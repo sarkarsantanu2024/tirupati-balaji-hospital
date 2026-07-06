@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { CheckCircle2, ArrowRight } from 'lucide-react'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
 import { diagnosticServicesHome } from '@/data/home'
@@ -40,13 +39,13 @@ export default function DiagnosticsSection() {
             <ul className="grid grid-cols-2 gap-2 mb-6">
               {main.bullets?.map((b) => (
                 <li key={b} className="flex items-center gap-2 text-sm text-neutral-700">
-                  <CheckCircle2 size={15} className="text-secondary-500 shrink-0" />
+                  <span className="material-symbols-outlined text-secondary-500 shrink-0" style={{ fontSize: 15 }}>check_circle</span>
                   {b}
                 </li>
               ))}
             </ul>
             <Button href="/services/diagnostics" variant="primary">
-              All Diagnostic Services <ArrowRight size={16} />
+              All Diagnostic Services <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
             </Button>
           </div>
 

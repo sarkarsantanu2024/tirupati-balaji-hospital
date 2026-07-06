@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
-import { Quote } from 'lucide-react'
 import SectionLabel from '@/components/ui/SectionLabel'
 import StarRating from '@/components/ui/StarRating'
 import { testimonialsData } from '@/data/home'
@@ -43,7 +42,7 @@ export default function TestimonialsSection() {
               <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100 hover:border-primary-200 hover:shadow-card transition-all h-full flex flex-col">
                 {/* Quote icon */}
                 <div className="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center mb-4">
-                  <Quote size={18} className="text-primary-500" />
+                  <span className="material-symbols-outlined text-primary-500" style={{ fontSize: 18 }}>format_quote</span>
                 </div>
 
                 <StarRating rating={t.rating} className="mb-3" />

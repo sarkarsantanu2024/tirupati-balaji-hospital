@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import { Phone, X, MessageCircle } from 'lucide-react'
 import { topBarLinks } from '@/data/navigation'
 
 export default function FloatingCTA() {
@@ -17,7 +16,7 @@ export default function FloatingCTA() {
               onClick={() => setShowNumbers(false)}
               className="p-1 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 transition-colors"
             >
-              <X size={14} />
+              <span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span>
             </button>
           </div>
           <div className="space-y-2">
@@ -27,7 +26,7 @@ export default function FloatingCTA() {
                 href={link.href}
                 className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
               >
-                <Phone size={14} className="text-primary-500 shrink-0" />
+                <span className="material-symbols-outlined text-primary-500 shrink-0" style={{ fontSize: 14 }}>phone</span>
                 {link.label}
               </a>
             ))}
@@ -46,7 +45,7 @@ export default function FloatingCTA() {
         className="w-14 h-14 rounded-2xl bg-[#25D366] hover:bg-[#1fb855] text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle size={26} className="fill-white" />
+        <span className="material-symbols-outlined" style={{ fontSize: 26, fontVariationSettings: "'FILL' 1" }}>chat</span>
       </a>
 
       {/* Call Button */}
@@ -55,7 +54,7 @@ export default function FloatingCTA() {
         className="w-14 h-14 rounded-2xl bg-primary-600 hover:bg-primary-700 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
         aria-label="Call us"
       >
-        <Phone size={24} />
+        <span className="material-symbols-outlined" style={{ fontSize: 24 }}>phone</span>
       </button>
     </div>
   )

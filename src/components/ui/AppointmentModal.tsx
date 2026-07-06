@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { X, Calendar, User, Phone, Mail, MessageSquare } from 'lucide-react'
 import { useAppointmentStore } from '@/store/uiStore'
 import { departmentsData } from '@/data/departments'
 import { doctorsData } from '@/data/doctors'
@@ -60,10 +59,10 @@ export default function AppointmentModal() {
             onClick={closeModal}
             className="absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
           >
-            <X size={18} />
+            <span className="material-symbols-outlined" style={{ fontSize: 18 }}>close</span>
           </button>
           <div className="flex items-center gap-3 mb-1">
-            <Calendar size={22} className="text-accent-300" />
+            <span className="material-symbols-outlined text-accent-300" style={{ fontSize: 22 }}>calendar_today</span>
             <h2 className="text-xl font-bold">Book an Appointment</h2>
           </div>
           <p className="text-white/80 text-sm">Fill in the details and we will confirm within 2 hours.</p>
@@ -84,7 +83,7 @@ export default function AppointmentModal() {
               <div>
                 <label className="block text-sm font-semibold text-neutral-700 mb-1">Full Name *</label>
                 <div className="relative">
-                  <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+                  <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 16 }}>person</span>
                   <input
                     name="name" required value={form.name} onChange={handleChange}
                     placeholder="Your name"
@@ -95,7 +94,7 @@ export default function AppointmentModal() {
               <div>
                 <label className="block text-sm font-semibold text-neutral-700 mb-1">Phone *</label>
                 <div className="relative">
-                  <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+                  <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 16 }}>phone</span>
                   <input
                     name="phone" required value={form.phone} onChange={handleChange}
                     placeholder="10-digit mobile"
@@ -109,7 +108,7 @@ export default function AppointmentModal() {
             <div>
               <label className="block text-sm font-semibold text-neutral-700 mb-1">Email</label>
               <div className="relative">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+                <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 16 }}>mail</span>
                 <input
                   name="email" type="email" value={form.email} onChange={handleChange}
                   placeholder="your@email.com"
@@ -174,7 +173,7 @@ export default function AppointmentModal() {
             <div>
               <label className="block text-sm font-semibold text-neutral-700 mb-1">Brief Symptoms / Notes</label>
               <div className="relative">
-                <MessageSquare size={16} className="absolute left-3 top-3 text-neutral-400" />
+                <span className="material-symbols-outlined absolute left-3 top-3 text-neutral-400" style={{ fontSize: 16 }}>chat_bubble</span>
                 <textarea
                   name="message" value={form.message} onChange={handleChange}
                   rows={3} placeholder="Describe your concern briefly…"

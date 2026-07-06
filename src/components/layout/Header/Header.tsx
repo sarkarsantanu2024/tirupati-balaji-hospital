@@ -1,9 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import {
-  Phone, ChevronDown, Menu, X, Calendar, Search
-} from 'lucide-react'
 import { navigationData, topBarLinks } from '@/data/navigation'
 import { useScrollY } from '@/hooks/useInView'
 import { useUIStore, useAppointmentStore } from '@/store/uiStore'
@@ -49,7 +46,7 @@ export default function Header() {
               href={link.href}
               className="flex items-center gap-1 text-white/80 hover:text-accent-300 transition-colors whitespace-nowrap text-[11px]"
             >
-              <Phone size={10} />
+              <span className="material-symbols-outlined" style={{ fontSize: 10 }}>phone</span>
               <span>{link.label}</span>
             </a>
           ))}
@@ -66,7 +63,7 @@ export default function Header() {
                 href={link.href}
                 className="flex items-center gap-1.5 text-white/80 hover:text-accent-300 transition-colors"
               >
-                <Phone size={13} />
+                <span className="material-symbols-outlined" style={{ fontSize: 13 }}>phone</span>
                 <span>{link.label}</span>
               </a>
             ))}
@@ -119,10 +116,10 @@ export default function Header() {
                     )}
                   >
                     {item.label}
-                    <ChevronDown
-                      size={14}
-                      className={cn('transition-transform', activeDropdown === item.label && 'rotate-180')}
-                    />
+                    <span
+                      className={cn('material-symbols-outlined transition-transform', activeDropdown === item.label && 'rotate-180')}
+                      style={{ fontSize: 14 }}
+                    >expand_more</span>
                   </button>
                 ) : (
                   <Link
@@ -208,13 +205,13 @@ export default function Header() {
               className="p-2 rounded-lg text-neutral-500 hover:text-primary-600 hover:bg-primary-50 transition-colors"
               aria-label="Search"
             >
-              <Search size={18} />
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>search</span>
             </button>
             <button
               onClick={() => openModal()}
               className="flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-300 shadow-button hover:shadow-lg hover:-translate-y-0.5 text-sm"
             >
-              <Calendar size={15} />
+              <span className="material-symbols-outlined" style={{ fontSize: 15 }}>calendar_today</span>
               Book Appointment
             </button>
           </div>
@@ -225,7 +222,7 @@ export default function Header() {
             className="lg:hidden p-2 rounded-lg text-neutral-700 hover:bg-neutral-100 transition-colors"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileMenuOpen ? <span className="material-symbols-outlined" style={{ fontSize: 22 }}>close</span> : <span className="material-symbols-outlined" style={{ fontSize: 22 }}>menu</span>}
           </button>
         </div>
       </header>
@@ -260,7 +257,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="p-1.5 rounded-lg bg-white/20 text-white hover:bg-white/30 transition-colors"
             >
-              <X size={18} />
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>close</span>
             </button>
           </div>
 
@@ -277,10 +274,10 @@ export default function Header() {
                       className="flex items-center justify-between w-full px-5 py-3.5 text-neutral-800 font-semibold hover:bg-primary-50 transition-colors"
                     >
                       <span>{item.label}</span>
-                      <ChevronDown
-                        size={16}
-                        className={cn('transition-transform text-neutral-400', mobileExpanded === item.label && 'rotate-180')}
-                      />
+                      <span
+                        className={cn('material-symbols-outlined transition-transform text-neutral-400', mobileExpanded === item.label && 'rotate-180')}
+                        style={{ fontSize: 16 }}
+                      >expand_more</span>
                     </button>
                     {mobileExpanded === item.label && (
                       <div className="bg-neutral-50 px-4 pb-2">
@@ -326,14 +323,14 @@ export default function Header() {
               onClick={() => { openModal(); setMobileMenuOpen(false) }}
               className="w-full flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-bold py-3.5 rounded-xl transition-colors"
             >
-              <Calendar size={18} />
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>calendar_today</span>
               Book Appointment
             </button>
             <a
               href="tel:08662500108"
               className="w-full flex items-center justify-center gap-2 border-2 border-primary-200 text-primary-600 font-semibold py-3 rounded-xl hover:bg-primary-50 transition-colors text-sm"
             >
-              <Phone size={16} />
+              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>phone</span>
               Emergency: 0866-250-0108
             </a>
           </div>

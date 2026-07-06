@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle2, Calendar, ArrowRight } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import Button from '@/components/ui/Button'
 import SectionLabel from '@/components/ui/SectionLabel'
@@ -68,7 +67,7 @@ export default function DepartmentPage({ params }: Props) {
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {dept.features.map((f) => (
                       <li key={f} className="flex items-center gap-3 bg-primary-50 rounded-xl p-3 border border-primary-100">
-                        <CheckCircle2 size={17} className="text-primary-600 shrink-0" />
+                        <span className="material-symbols-outlined text-primary-600 shrink-0" style={{ fontSize: 17 }}>check_circle</span>
                         <span className="text-sm font-medium text-neutral-700">{f}</span>
                       </li>
                     ))}
@@ -112,7 +111,7 @@ export default function DepartmentPage({ params }: Props) {
                 <h3 className="font-bold text-lg mb-2">Book a Consultation</h3>
                 <p className="text-white/80 text-sm mb-5">Speak with one of our {dept.name} specialists today.</p>
                 <Button href="/contact" variant="outline-white" size="sm">
-                  <Calendar size={15} /> Schedule Now
+                  <span className="material-symbols-outlined" style={{ fontSize: 15 }}>calendar_today</span> Schedule Now
                 </Button>
               </div>
 
@@ -149,7 +148,7 @@ export default function DepartmentPage({ params }: Props) {
                       href={`/departments/${d.slug}`}
                       className="flex items-center gap-2 text-sm text-neutral-600 hover:text-primary-600 py-1.5 hover:pl-1 transition-all"
                     >
-                      <span>{d.icon}</span> {d.name} <ArrowRight size={12} className="ml-auto" />
+                      <span>{d.icon}</span> {d.name} <span className="material-symbols-outlined ml-auto" style={{ fontSize: 12 }}>arrow_forward</span>
                     </Link>
                   ))}
                   <Link href="/departments" className="text-xs text-primary-600 font-semibold block pt-2">

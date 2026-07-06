@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Twitter, Linkedin, Heart } from 'lucide-react'
+import { Facebook, Instagram, Youtube, Twitter, Linkedin } from 'lucide-react'
 import { navigationData } from '@/data/navigation'
 import { contactInfo } from '@/data/contact'
 import { departmentsData } from '@/data/departments'
@@ -107,12 +107,12 @@ export default function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-widest text-white/50 mb-5">Get In Touch</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin size={16} className="text-accent-400 mt-0.5 shrink-0" />
+                <span className="material-symbols-outlined text-accent-400 mt-0.5 shrink-0" style={{ fontSize: 16 }}>location_on</span>
                 <p className="text-sm text-neutral-400 leading-relaxed">{contactInfo.address}</p>
               </div>
               {contactInfo.phone.map((p) => (
                 <div key={p.label} className="flex items-center gap-3">
-                  <Phone size={15} className="text-accent-400 shrink-0" />
+                  <span className="material-symbols-outlined text-accent-400 shrink-0" style={{ fontSize: 15 }}>phone</span>
                   <div>
                     <p className="text-xs text-neutral-500 leading-none mb-0.5">{p.label}</p>
                     <a href={`tel:${p.value.replace(/[\s-]/g, '')}`} className="text-sm text-neutral-300 hover:text-white transition-colors font-medium">
@@ -122,7 +122,7 @@ export default function Footer() {
                 </div>
               ))}
               <div className="flex items-center gap-3">
-                <Mail size={15} className="text-accent-400 shrink-0" />
+                <span className="material-symbols-outlined text-accent-400 shrink-0" style={{ fontSize: 15 }}>mail</span>
                 <a href={`mailto:${contactInfo.email}`} className="text-sm text-neutral-400 hover:text-white transition-colors">
                   {contactInfo.email}
                 </a>
@@ -150,7 +150,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Tirupoti Balaji Hospital. All Rights Reserved.
           </p>
           <p className="flex items-center gap-1.5">
-            Crafted with <Heart size={13} className="text-red-500 fill-red-500" /> for better health
+            Crafted with <span className="material-symbols-outlined text-red-500" style={{ fontSize: 13, fontVariationSettings: "'FILL' 1" }}>favorite</span> for better health
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>

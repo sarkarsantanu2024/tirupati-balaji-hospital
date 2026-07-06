@@ -3,7 +3,6 @@ import { useRef } from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules'
-import { Play, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { BannerSlide } from '@/types'
 import Button from '@/components/ui/Button'
 
@@ -94,7 +93,7 @@ export default function HeroBanner({ slides }: HeroBannerProps) {
                     {/* Video badge */}
                     {slide.type === 'video' && (
                       <div className="inline-flex items-center gap-2 bg-accent-500/90 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">
-                        <Play size={11} className="fill-white" />
+                        <span className="material-symbols-outlined" style={{ fontSize: 11, fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
                         Video Tour
                       </div>
                     )}
@@ -132,14 +131,14 @@ export default function HeroBanner({ slides }: HeroBannerProps) {
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white hover:bg-accent-500 hover:border-accent-500 flex items-center justify-center transition-all duration-300 hidden md:flex"
         aria-label="Previous slide"
       >
-        <ChevronLeft size={22} />
+        <span className="material-symbols-outlined" style={{ fontSize: 22 }}>chevron_left</span>
       </button>
       <button
         ref={nextRef}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white hover:bg-accent-500 hover:border-accent-500 flex items-center justify-center transition-all duration-300 hidden md:flex"
         aria-label="Next slide"
       >
-        <ChevronRight size={22} />
+        <span className="material-symbols-outlined" style={{ fontSize: 22 }}>chevron_right</span>
       </button>
 
       {/* Quick Stats Bar */}

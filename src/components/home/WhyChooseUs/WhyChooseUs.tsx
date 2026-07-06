@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { CheckCircle2 } from 'lucide-react'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
 import { whyChooseUsPoints } from '@/data/home'
@@ -51,10 +50,10 @@ export default function WhyChooseUs() {
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {whyChooseUsPoints.map((point) => (
                 <li key={point} className="flex items-start gap-3">
-                  <CheckCircle2
-                    size={20}
-                    className="text-secondary-500 mt-0.5 shrink-0 fill-secondary-50"
-                  />
+                  <span
+                    className="material-symbols-outlined text-secondary-500 mt-0.5 shrink-0"
+                    style={{ fontSize: 20, fontVariationSettings: "'FILL' 1" }}
+                  >check_circle</span>
                   <span className="text-neutral-700 text-sm font-medium leading-snug">{point}</span>
                 </li>
               ))}

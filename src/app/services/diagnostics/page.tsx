@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { CheckCircle2 } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import SectionLabel from '@/components/ui/SectionLabel'
 import Button from '@/components/ui/Button'
@@ -69,7 +68,7 @@ export default function DiagnosticsPage() {
                     <ul className="space-y-2 mb-6">
                       {service.bullets.map((b) => (
                         <li key={b} className="flex items-center gap-3">
-                          <CheckCircle2 size={16} className="text-secondary-500 shrink-0" />
+                          <span className="material-symbols-outlined text-secondary-500 shrink-0" style={{ fontSize: 16 }}>check_circle</span>
                           <span className="text-sm text-neutral-700 font-medium">{b}</span>
                         </li>
                       ))}

@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
-import { X } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import { galleryItems, galleryCategories } from '@/data/gallery'
 import type { GalleryCategory } from '@/types'
@@ -88,7 +87,7 @@ export default function GalleryPage() {
             className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40 transition-colors"
             aria-label="Close"
           >
-            <X size={20} />
+            <span className="material-symbols-outlined" style={{ fontSize: 20 }}>close</span>
           </button>
           <div
             className="relative max-w-4xl w-full max-h-[85vh] rounded-2xl overflow-hidden"

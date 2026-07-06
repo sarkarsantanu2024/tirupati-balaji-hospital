@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react'
 import PageHero from '@/components/layout/Breadcrumb/PageHero'
 import { contactInfo } from '@/data/contact'
 import { cn } from '@/lib/utils'
@@ -37,7 +36,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center shrink-0">
-                    <MapPin size={18} className="text-primary-600" />
+                    <span className="material-symbols-outlined text-primary-600" style={{ fontSize: 18 }}>location_on</span>
                   </div>
                   <div>
                     <h3 className="font-bold text-neutral-800 mb-2">Our Address</h3>
@@ -50,7 +49,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-secondary-100 flex items-center justify-center shrink-0">
-                    <Phone size={18} className="text-secondary-600" />
+                    <span className="material-symbols-outlined text-secondary-600" style={{ fontSize: 18 }}>phone</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-neutral-800 mb-3">Phone Numbers</h3>
@@ -70,7 +69,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-xl bg-accent-100 flex items-center justify-center shrink-0">
-                    <Mail size={18} className="text-accent-600" />
+                    <span className="material-symbols-outlined text-accent-600" style={{ fontSize: 18 }}>mail</span>
                   </div>
                   <div>
                     <h3 className="font-bold text-neutral-800 mb-1">Email Us</h3>
@@ -85,7 +84,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center shrink-0">
-                    <Clock size={18} className="text-primary-600" />
+                    <span className="material-symbols-outlined text-primary-600" style={{ fontSize: 18 }}>schedule</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-neutral-800 mb-3">Working Hours</h3>
@@ -119,7 +118,7 @@ export default function ContactPage() {
                 {submitted ? (
                   <div className="text-center py-16">
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
-                      <CheckCircle2 size={40} className="text-green-600" />
+                      <span className="material-symbols-outlined text-green-600" style={{ fontSize: 40 }}>check_circle</span>
                     </div>
                     <h3 className="text-xl font-extrabold text-neutral-800 mb-2">Message Sent!</h3>
                     <p className="text-neutral-500">Our team will reach out to you shortly.</p>
