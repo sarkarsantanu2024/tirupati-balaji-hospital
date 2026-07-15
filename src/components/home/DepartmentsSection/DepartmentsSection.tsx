@@ -12,7 +12,7 @@ export default function DepartmentsSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
             <SectionLabel>Our Departments</SectionLabel>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 leading-tight">
               Comprehensive Care Across{' '}
               <span className="gradient-text">All Specialties</span>
             </h2>
@@ -40,12 +40,12 @@ export default function DepartmentsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 via-primary-900/20 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-white font-bold text-lg leading-tight">{dept.name}</h3>
+                  <h3 className="text-white font-bold text-xl leading-tight">{dept.name}</h3>
                 </div>
               </div>
               <div className="p-5 flex-1 flex flex-col">
-                <p className="text-neutral-500 text-sm leading-relaxed mb-4 flex-1">{dept.shortDesc}</p>
-                <span className="inline-flex items-center gap-1 text-primary-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                <p className="text-neutral-500 text-base leading-relaxed mb-4 flex-1">{dept.shortDesc}</p>
+                <span className="inline-flex items-center gap-1 text-primary-600 font-semibold text-base group-hover:gap-2 transition-all">
                   Learn More <span className="material-symbols-outlined" style={{ fontSize: 14 }}>arrow_forward</span>
                 </span>
               </div>
@@ -55,15 +55,15 @@ export default function DepartmentsSection() {
 
         {/* Department Pills – All */}
         <div className="bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm">
-          <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4">All Departments</p>
+          <p className="text-base font-bold uppercase tracking-widest text-neutral-400 mb-4">All Departments</p>
           <div className="flex flex-wrap gap-2">
             {departmentsData.map((dept) => (
               <Link
                 key={dept.slug}
                 href={`/departments/${dept.slug}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-200 text-sm text-neutral-600 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-700 transition-all duration-200 font-medium"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-200 text-base text-neutral-600 hover:border-primary-300 hover:bg-primary-50 hover:text-primary-700 transition-all duration-200 font-medium"
               >
-                <span>{dept.icon}</span>
+                <span className="material-symbols-outlined text-primary-500" style={{ fontSize: 18 }}>{dept.icon}</span>
                 {dept.name}
               </Link>
             ))}

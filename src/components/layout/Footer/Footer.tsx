@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Facebook, Instagram, Youtube, Twitter, Linkedin } from 'lucide-react'
 import { navigationData } from '@/data/navigation'
 import { contactInfo } from '@/data/contact'
@@ -27,11 +28,15 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-400 to-secondary-400 flex items-center justify-center shadow-md shrink-0">
-                <span className="text-white font-black text-xl">TB</span>
-              </div>
+              <Image
+                src="/images/brand-logo.jpeg"
+                alt="Tirupoti Balaji Multi-Specialty Hospital"
+                width={48}
+                height={48}
+                className="w-12 h-12 rounded-xl object-cover shadow-md shrink-0"
+              />
               <div className="leading-tight">
-                <div className="font-extrabold text-white text-lg leading-none">Tirupoti Balaji</div>
+                <div className="font-extrabold text-white text-base leading-none">Tirupoti Balaji</div>
                 <div className="text-xs text-white/50 font-medium tracking-wide mt-0.5">Multi-Specialty Hospital</div>
               </div>
             </Link>
@@ -107,14 +112,14 @@ export default function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-widest text-white/50 mb-5">Get In Touch</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-accent-400 mt-0.5 shrink-0" style={{ fontSize: 16 }}>location_on</span>
+                <span className="material-symbols-outlined text-accent-400 mt-0.5 shrink-0" style={{ fontSize: 13 }}>location_on</span>
                 <p className="text-sm text-neutral-400 leading-relaxed">{contactInfo.address}</p>
               </div>
               {contactInfo.phone.map((p) => (
                 <div key={p.label} className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-accent-400 shrink-0" style={{ fontSize: 15 }}>phone</span>
+                  <span className="material-symbols-outlined text-accent-400 shrink-0" style={{ fontSize: 13 }}>phone</span>
                   <div>
-                    <p className="text-xs text-neutral-500 leading-none mb-0.5">{p.label}</p>
+                    <p className="text-sm text-neutral-500 leading-none mb-0.5">{p.label}</p>
                     <a href={`tel:${p.value.replace(/[\s-]/g, '')}`} className="text-sm text-neutral-300 hover:text-white transition-colors font-medium">
                       {p.value}
                     </a>
@@ -122,7 +127,7 @@ export default function Footer() {
                 </div>
               ))}
               <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-accent-400 shrink-0" style={{ fontSize: 15 }}>mail</span>
+                <span className="material-symbols-outlined text-accent-400 shrink-0" style={{ fontSize: 13 }}>mail</span>
                 <a href={`mailto:${contactInfo.email}`} className="text-sm text-neutral-400 hover:text-white transition-colors">
                   {contactInfo.email}
                 </a>
@@ -131,9 +136,9 @@ export default function Footer() {
 
             {/* Hours quick view */}
             <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
-              <p className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2">Timings</p>
+              <p className="text-sm font-bold text-white/50 uppercase tracking-wider mb-2">Timings</p>
               {contactInfo.hours.map((h) => (
-                <div key={h.label} className="flex justify-between text-xs text-neutral-400 py-0.5">
+                <div key={h.label} className="flex justify-between text-sm text-neutral-400 py-0.5">
                   <span>{h.label}</span>
                   <span className="text-white/70 font-medium">{h.value}</span>
                 </div>
@@ -150,7 +155,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Tirupoti Balaji Hospital. All Rights Reserved.
           </p>
           <p className="flex items-center gap-1.5">
-            Crafted with <span className="material-symbols-outlined text-red-500" style={{ fontSize: 13, fontVariationSettings: "'FILL' 1" }}>favorite</span> for better health
+            Crafted with <span className="material-symbols-outlined text-red-500" style={{ fontSize: 15, fontVariationSettings: "'FILL' 1" }}>favorite</span> for better health
           </p>
           <div className="flex items-center gap-4">
             <span aria-disabled="true" className="cursor-not-allowed select-none">Privacy Policy</span>

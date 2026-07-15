@@ -36,15 +36,15 @@ export default function DepartmentsPage() {
                     sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent" />
-                  <div className="absolute top-3 left-3 text-3xl">{dept.icon}</div>
+                  <span className="material-symbols-outlined absolute top-3 left-3 text-white" style={{ fontSize: 32 }}>{dept.icon}</span>
                   <div className="absolute bottom-3 left-3 right-3">
                     <h3 className="text-white font-bold text-base leading-tight">{dept.name}</h3>
                   </div>
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
-                  <p className="text-neutral-500 text-sm leading-relaxed flex-1 mb-3">{dept.shortDesc}</p>
-                  <span className="inline-flex items-center gap-1 text-primary-600 font-semibold text-sm group-hover:gap-2 transition-all">
-                    Learn More <span className="material-symbols-outlined" style={{ fontSize: 13 }}>arrow_forward</span>
+                  <p className="text-neutral-500 text-base leading-relaxed flex-1 mb-3">{dept.shortDesc}</p>
+                  <span className="inline-flex items-center gap-1 text-primary-600 font-semibold text-base group-hover:gap-2 transition-all">
+                    Learn More <span className="material-symbols-outlined" style={{ fontSize: 15 }}>arrow_forward</span>
                   </span>
                 </div>
               </Link>

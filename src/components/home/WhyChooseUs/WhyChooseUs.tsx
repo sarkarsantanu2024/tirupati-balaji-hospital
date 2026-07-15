@@ -23,19 +23,19 @@ export default function WhyChooseUs() {
 
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -right-6 bg-accent-500 text-white rounded-2xl p-5 shadow-button hidden md:block">
-              <div className="text-3xl font-extrabold leading-none">28+</div>
-              <div className="text-xs mt-1 font-semibold opacity-90">Years of Excellence</div>
+              <div className="text-4xl font-extrabold leading-none">28+</div>
+              <div className="text-base mt-1 font-semibold opacity-90">Years of Excellence</div>
             </div>
             <div className="absolute -top-6 -left-6 bg-white rounded-2xl p-4 shadow-card hidden md:block border border-neutral-100">
-              <div className="text-2xl font-extrabold text-primary-700 leading-none">42L+</div>
-              <div className="text-xs text-neutral-500 mt-1">Happy Patients</div>
+              <div className="text-3xl font-extrabold text-primary-700 leading-none">42L+</div>
+              <div className="text-base text-neutral-500 mt-1">Happy Patients</div>
             </div>
           </div>
 
           {/* Text Column */}
           <div>
             <SectionLabel>Why Choose Us</SectionLabel>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800 mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 mb-4 leading-tight">
               Why Tirupoti Balaji Is{' '}
               <span className="gradient-text">Andhra Pradesh&apos;s</span>{' '}
               Most Trusted Hospital?
@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
                     className="material-symbols-outlined text-secondary-500 mt-0.5 shrink-0"
                     style={{ fontSize: 20, fontVariationSettings: "'FILL' 1" }}
                   >check_circle</span>
-                  <span className="text-neutral-700 text-sm font-medium leading-snug">{point}</span>
+                  <span className="text-neutral-700 text-base font-medium leading-snug">{point}</span>
                 </li>
               ))}
             </ul>

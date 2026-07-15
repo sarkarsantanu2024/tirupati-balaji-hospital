@@ -21,7 +21,7 @@ export default function FloatingCTA() {
       {showNumbers && (
         <div className="bg-white rounded-2xl shadow-xl border border-neutral-100 p-4 mb-1 w-64 animate-in fade-in slide-in-from-bottom-2">
           <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary-600">Emergency Numbers</span>
+            <span className="text-base font-bold uppercase tracking-widest text-primary-600">Emergency Numbers</span>
             <button
               onClick={() => setShowNumbers(false)}
               className="p-1 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 transition-colors"
@@ -34,7 +34,7 @@ export default function FloatingCTA() {
               <a
                 key={link.label}
                 href={link.href}
-                className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-base font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
               >
                 <span className="material-symbols-outlined text-primary-500 shrink-0" style={{ fontSize: 14 }}>phone</span>
                 {link.label}
@@ -42,7 +42,7 @@ export default function FloatingCTA() {
             ))}
           </div>
           <div className="mt-3 pt-3 border-t border-neutral-100 text-center">
-            <span className="text-[11px] text-neutral-400 font-medium">Available 24×7</span>
+            <span className="text-base text-neutral-400 font-medium">Available 24×7</span>
           </div>
         </div>
       )}

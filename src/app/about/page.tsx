@@ -28,7 +28,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
               <SectionLabel>About Us</SectionLabel>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800 mb-5 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 mb-5 leading-tight">
                 Welcome to{' '}
                 <span className="gradient-text">Tirupoti Balaji Hospital</span>
               </h2>
@@ -39,7 +39,7 @@ export default function AboutPage() {
                 {hero.highlights.map((h) => (
                   <span
                     key={h}
-                    className="inline-flex items-center gap-1.5 bg-primary-50 text-primary-700 text-sm font-semibold px-4 py-2 rounded-full border border-primary-100"
+                    className="inline-flex items-center gap-1.5 bg-primary-50 text-primary-700 text-base font-semibold px-4 py-2 rounded-full border border-primary-100"
                   >
                     <span className="material-symbols-outlined" style={{ fontSize: 14 }}>check_circle</span>
                     {h}
@@ -63,7 +63,7 @@ export default function AboutPage() {
             </div>
             <div>
               <SectionLabel>Our Story</SectionLabel>
-              <h2 className="text-3xl font-extrabold text-neutral-800 mb-6 leading-tight">{story.title}</h2>
+              <h2 className="text-4xl font-extrabold text-neutral-800 mb-6 leading-tight">{story.title}</h2>
               {story.paragraphs.map((p, i) => (
                 <p key={i} className="text-neutral-600 text-base leading-relaxed mb-4">{p}</p>
               ))}
@@ -77,28 +77,28 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <SectionLabel align="center">Mission & Vision</SectionLabel>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800">
               Our Purpose & <span className="gradient-text">Direction</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-3xl p-8 text-white">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-extrabold mb-3">{missionVision.mission.title}</h3>
+              <span className="material-symbols-outlined block mb-4" style={{ fontSize: 40 }}>track_changes</span>
+              <h3 className="text-2xl font-extrabold mb-3">{missionVision.mission.title}</h3>
               <p className="text-white/85 leading-relaxed">{missionVision.mission.text}</p>
             </div>
             <div className="bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-3xl p-8 text-white">
-              <div className="text-4xl mb-4">🔭</div>
-              <h3 className="text-xl font-extrabold mb-3">{missionVision.vision.title}</h3>
+              <span className="material-symbols-outlined block mb-4" style={{ fontSize: 40 }}>visibility</span>
+              <h3 className="text-2xl font-extrabold mb-3">{missionVision.vision.title}</h3>
               <p className="text-white/85 leading-relaxed">{missionVision.vision.text}</p>
             </div>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {missionVision.values.map((v) => (
               <div key={v.label} className="bg-neutral-50 rounded-2xl p-6 text-center border border-neutral-100 hover:border-primary-200 hover:shadow-card transition-all">
-                <div className="text-3xl mb-3">{v.icon}</div>
+                <span className="material-symbols-outlined block text-primary-600 mb-3" style={{ fontSize: 32 }}>{v.icon}</span>
                 <h4 className="font-bold text-neutral-800 mb-2">{v.label}</h4>
-                <p className="text-neutral-500 text-sm">{v.desc}</p>
+                <p className="text-neutral-500 text-base">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <SectionLabel align="center">Our Journey</SectionLabel>
-            <h2 className="text-3xl font-extrabold text-neutral-800">
+            <h2 className="text-4xl font-extrabold text-neutral-800">
               Building Blocks of <span className="gradient-text">Tirupoti Balaji</span>
             </h2>
           </div>
@@ -120,13 +120,13 @@ export default function AboutPage() {
               {phases.map((p, i) => (
                 <div key={i} className="relative flex gap-8">
                   <div className="hidden md:flex flex-col items-center shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-lg shadow-lg z-10">
+                    <div className="w-16 h-16 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-xl shadow-lg z-10">
                       {['I', 'II', 'III', 'IV'][i]}
                     </div>
                   </div>
                   <div className="flex-1 bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:border-primary-200 transition-colors">
                     <h3 className="font-bold text-primary-700 mb-2">{p.phase}</h3>
-                    <p className="text-neutral-600 text-sm leading-relaxed">{p.description}</p>
+                    <p className="text-neutral-600 text-base leading-relaxed">{p.description}</p>
                   </div>
                 </div>
               ))}
@@ -140,7 +140,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <SectionLabel align="center">Advanced Technology</SectionLabel>
-            <h2 className="text-3xl font-extrabold text-neutral-800">
+            <h2 className="text-4xl font-extrabold text-neutral-800">
               Our <span className="gradient-text">Medical Technology</span>
             </h2>
           </div>
@@ -151,8 +151,8 @@ export default function AboutPage() {
                   <span className="material-symbols-outlined text-primary-600" style={{ fontSize: 18 }}>emoji_events</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-neutral-800 text-sm mb-1">{t.name}</h4>
-                  <p className="text-neutral-500 text-xs leading-relaxed">{t.desc}</p>
+                  <h4 className="font-bold text-neutral-800 text-base mb-1">{t.name}</h4>
+                  <p className="text-neutral-500 text-base leading-relaxed">{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -164,13 +164,13 @@ export default function AboutPage() {
       <section className="py-12 bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-extrabold text-neutral-800">Accreditations & Certifications</h2>
+            <h2 className="text-3xl font-extrabold text-neutral-800">Accreditations & Certifications</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {accreditations.map((a) => (
               <div key={a.name} className="bg-white rounded-2xl px-8 py-5 shadow-sm border border-neutral-100 text-center min-w-40">
-                <div className="text-2xl font-extrabold text-primary-700 mb-1">{a.name}</div>
-                <div className="text-xs text-neutral-400">{a.desc}</div>
+                <div className="text-3xl font-extrabold text-primary-700 mb-1">{a.name}</div>
+                <div className="text-base text-neutral-400">{a.desc}</div>
               </div>
             ))}
           </div>

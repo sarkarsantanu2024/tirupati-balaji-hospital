@@ -63,42 +63,42 @@ export default function AppointmentModal() {
           </button>
           <div className="flex items-center gap-3 mb-1">
             <span className="material-symbols-outlined text-accent-300" style={{ fontSize: 22 }}>calendar_today</span>
-            <h2 className="text-xl font-bold">Book an Appointment</h2>
+            <h2 className="text-2xl font-bold">Book an Appointment</h2>
           </div>
-          <p className="text-white/80 text-sm">Fill in the details and we will confirm within 2 hours.</p>
+          <p className="text-white/80 text-base">Fill in the details and we will confirm within 2 hours.</p>
         </div>
 
         {submitted ? (
           <div className="p-12 text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl">✅</span>
+              <span className="material-symbols-outlined text-green-600" style={{ fontSize: 32 }}>check</span>
             </div>
-            <h3 className="text-xl font-bold text-neutral-800 mb-2">Appointment Requested!</h3>
-            <p className="text-neutral-500 text-sm">Our team will call you shortly to confirm.</p>
+            <h3 className="text-2xl font-bold text-neutral-800 mb-2">Appointment Requested!</h3>
+            <p className="text-neutral-500 text-base">Our team will call you shortly to confirm.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="p-6 space-y-4">
             {/* Name & Phone */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-neutral-700 mb-1">Full Name *</label>
+                <label className="block text-base font-semibold text-neutral-700 mb-1">Full Name *</label>
                 <div className="relative">
                   <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 16 }}>person</span>
                   <input
                     name="name" required value={form.name} onChange={handleChange}
                     placeholder="Your name"
-                    className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+                    className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-neutral-700 mb-1">Phone *</label>
+                <label className="block text-base font-semibold text-neutral-700 mb-1">Phone *</label>
                 <div className="relative">
                   <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 16 }}>phone</span>
                   <input
                     name="phone" required value={form.phone} onChange={handleChange}
                     placeholder="10-digit mobile"
-                    className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+                    className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
                   />
                 </div>
               </div>
@@ -106,13 +106,13 @@ export default function AppointmentModal() {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-semibold text-neutral-700 mb-1">Email</label>
+              <label className="block text-base font-semibold text-neutral-700 mb-1">Email</label>
               <div className="relative">
                 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" style={{ fontSize: 16 }}>mail</span>
                 <input
                   name="email" type="email" value={form.email} onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+                  className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
                 />
               </div>
             </div>
@@ -120,10 +120,10 @@ export default function AppointmentModal() {
             {/* Department & Doctor */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-neutral-700 mb-1">Department</label>
+                <label className="block text-base font-semibold text-neutral-700 mb-1">Department</label>
                 <select
                   name="department" value={form.department} onChange={handleChange}
-                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
+                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
                 >
                   <option value="">All Departments</option>
                   {departmentsData.map(d => (
@@ -132,10 +132,10 @@ export default function AppointmentModal() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-neutral-700 mb-1">Doctor</label>
+                <label className="block text-base font-semibold text-neutral-700 mb-1">Doctor</label>
                 <select
                   name="doctor" value={form.doctor} onChange={handleChange}
-                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
+                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
                 >
                   <option value="">Any Doctor</option>
                   {filteredDoctors.map(d => (
@@ -148,18 +148,18 @@ export default function AppointmentModal() {
             {/* Date & Time */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-neutral-700 mb-1">Preferred Date *</label>
+                <label className="block text-base font-semibold text-neutral-700 mb-1">Preferred Date *</label>
                 <input
                   name="date" required type="date" value={form.date} onChange={handleChange}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-neutral-700 mb-1">Preferred Time</label>
+                <label className="block text-base font-semibold text-neutral-700 mb-1">Preferred Time</label>
                 <select
                   name="time" value={form.time} onChange={handleChange}
-                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
+                  className="w-full px-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
                 >
                   <option value="">Any Time</option>
                   <option value="morning">Morning (8 AM – 12 PM)</option>
@@ -171,13 +171,13 @@ export default function AppointmentModal() {
 
             {/* Message */}
             <div>
-              <label className="block text-sm font-semibold text-neutral-700 mb-1">Brief Symptoms / Notes</label>
+              <label className="block text-base font-semibold text-neutral-700 mb-1">Brief Symptoms / Notes</label>
               <div className="relative">
                 <span className="material-symbols-outlined absolute left-3 top-3 text-neutral-400" style={{ fontSize: 16 }}>chat_bubble</span>
                 <textarea
                   name="message" value={form.message} onChange={handleChange}
                   rows={3} placeholder="Describe your concern briefly…"
-                  className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition resize-none"
+                  className="w-full pl-9 pr-3 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition resize-none"
                 />
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function AppointmentModal() {
             >
               Request Appointment
             </button>
-            <p className="text-center text-xs text-neutral-400">
+            <p className="text-center text-base text-neutral-400">
               We respect your privacy. Your information is safe with us.
             </p>
           </form>

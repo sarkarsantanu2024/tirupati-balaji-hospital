@@ -33,7 +33,7 @@ export default function GalleryPage() {
                 key={cat.value}
                 onClick={() => setActiveCategory(cat.value)}
                 className={cn(
-                  'px-4 py-2 rounded-full text-sm font-semibold border transition-all',
+                  'px-4 py-2 rounded-full text-base font-semibold border transition-all',
                   activeCategory === cat.value
                     ? 'bg-primary-600 text-white border-primary-600 shadow'
                     : 'bg-white text-neutral-600 border-neutral-200 hover:border-primary-300 hover:text-primary-600'
@@ -62,12 +62,12 @@ export default function GalleryPage() {
                 <div className="absolute inset-0 bg-primary-900/0 group-hover:bg-primary-900/40 transition-colors" />
                 {item.caption && (
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary-900/80 to-transparent p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-white text-xs font-medium">{item.caption}</p>
+                    <p className="text-white text-base font-medium">{item.caption}</p>
                   </div>
                 )}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white backdrop-blur-sm">
-                    🔍
+                    <span className="material-symbols-outlined" style={{ fontSize: 20 }}>zoom_in</span>
                   </div>
                 </div>
               </button>
@@ -101,7 +101,7 @@ export default function GalleryPage() {
               className="object-contain w-full h-full max-h-[85vh]"
             />
             {activeSrc.caption && (
-              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm p-4 text-center">
+              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-base p-4 text-center">
                 {activeSrc.caption}
               </div>
             )}

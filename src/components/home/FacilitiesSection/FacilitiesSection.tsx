@@ -22,10 +22,10 @@ export default function FacilitiesSection() {
       <div className="container-custom">
         <div className="text-center mb-12">
           <SectionLabel align="center">Multi-Specialty Facilities</SectionLabel>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800">
             Your Trusted Partner in <span className="gradient-text">Quality Healthcare</span>
           </h2>
-          <p className="text-neutral-500 mt-4 max-w-xl mx-auto text-sm">
+          <p className="text-neutral-500 mt-4 max-w-xl mx-auto text-base">
             We offer a comprehensive suite of inpatient and outpatient facilities, ensuring every
             aspect of your health is looked after with precision and compassion.
           </p>
@@ -45,7 +45,7 @@ export default function FacilitiesSection() {
                 <h3 className="font-bold text-neutral-800 text-base mb-2 group-hover:text-primary-700 transition-colors">
                   {fac.title}
                 </h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{fac.description}</p>
+                <p className="text-neutral-500 text-base leading-relaxed">{fac.description}</p>
               </div>
             )
           })}

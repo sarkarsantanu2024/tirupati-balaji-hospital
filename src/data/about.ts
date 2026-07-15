@@ -32,10 +32,10 @@ export const aboutData = {
       text: 'To be the most trusted multi-specialty hospital in South India — a Centre of Excellence where innovation meets compassion, and where every patient receives the care they deserve regardless of their background.',
     },
     values: [
-      { icon: '🤝', label: 'Compassion', desc: 'Treating every patient with dignity, empathy, and respect.' },
-      { icon: '🏅', label: 'Excellence', desc: 'Committed to the highest standards of clinical quality and patient safety.' },
-      { icon: '🔬', label: 'Innovation', desc: 'Embracing advanced technology to constantly improve patient outcomes.' },
-      { icon: '🌍', label: 'Accessibility', desc: 'Making quality healthcare available and affordable for all communities.' },
+      { icon: 'volunteer_activism', label: 'Compassion', desc: 'Treating every patient with dignity, empathy, and respect.' },
+      { icon: 'workspace_premium', label: 'Excellence', desc: 'Committed to the highest standards of clinical quality and patient safety.' },
+      { icon: 'science', label: 'Innovation', desc: 'Embracing advanced technology to constantly improve patient outcomes.' },
+      { icon: 'public', label: 'Accessibility', desc: 'Making quality healthcare available and affordable for all communities.' },
     ],
   },
 

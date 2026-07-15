@@ -40,7 +40,7 @@ export default function FindADoctorPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search by name or specialty…"
-              className="w-full pl-10 pr-4 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+              className="w-full pl-10 pr-4 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
             />
           </div>
           <div className="relative">
@@ -48,7 +48,7 @@ export default function FindADoctorPage() {
             <select
               value={selectedDept}
               onChange={(e) => setSelectedDept(e.target.value)}
-              className="pl-9 pr-8 py-2.5 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white appearance-none cursor-pointer"
+              className="pl-9 pr-8 py-2.5 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white appearance-none cursor-pointer"
             >
               <option value="">All Departments</option>
               {departmentsData.map((d) => (
@@ -56,7 +56,7 @@ export default function FindADoctorPage() {
               ))}
             </select>
           </div>
-          <div className="text-sm text-neutral-400 self-center shrink-0">
+          <div className="text-base text-neutral-400 self-center shrink-0">
             {filtered.length} doctor{filtered.length !== 1 ? 's' : ''} found
           </div>
         </div>
@@ -67,8 +67,8 @@ export default function FindADoctorPage() {
         <div className="container-custom">
           {filtered.length === 0 ? (
             <div className="text-center py-20">
-              <div className="text-5xl mb-4">🔍</div>
-              <h3 className="text-xl font-bold text-neutral-700 mb-2">No doctors found</h3>
+              <span className="material-symbols-outlined block text-neutral-300 mb-4" style={{ fontSize: 48 }}>search_off</span>
+              <h3 className="text-2xl font-bold text-neutral-700 mb-2">No doctors found</h3>
               <p className="text-neutral-400">Try a different name, specialty, or department filter.</p>
             </div>
           ) : (
@@ -90,7 +90,7 @@ export default function FindADoctorPage() {
                         className="object-cover object-top"
                         sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
                       />
-                      <div className="absolute bottom-3 right-3 bg-accent-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                      <div className="absolute bottom-3 right-3 bg-accent-500 text-white text-base font-bold px-2.5 py-1 rounded-full">
                         {doctor.experience} yrs exp
                       </div>
                     </div>
@@ -98,25 +98,25 @@ export default function FindADoctorPage() {
                     {/* Info */}
                     <div className="p-5 flex-1 flex flex-col">
                       <h3 className="font-extrabold text-neutral-800 text-base mb-0.5">{doctor.name}</h3>
-                      <p className="text-secondary-600 font-semibold text-sm mb-1">{doctor.specialization}</p>
-                      <p className="text-neutral-400 text-xs mb-3 leading-snug">{doctor.qualification}</p>
+                      <p className="text-secondary-600 font-semibold text-base mb-1">{doctor.specialization}</p>
+                      <p className="text-neutral-400 text-base mb-3 leading-snug">{doctor.qualification}</p>
 
                       {dept && (
-                        <span className="inline-flex items-center gap-1 bg-primary-50 text-primary-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3 w-fit">
-                          {dept.icon} {dept.name}
+                        <span className="inline-flex items-center gap-1 bg-primary-50 text-primary-700 text-base font-semibold px-2.5 py-1 rounded-full mb-3 w-fit">
+                          <span className="material-symbols-outlined" style={{ fontSize: 15 }}>{dept.icon}</span> {dept.name}
                         </span>
                       )}
 
                       {doctor.schedule && (
-                        <p className="text-xs text-neutral-400 mb-4">
-                          🕐 {doctor.schedule}
+                        <p className="text-base text-neutral-400 mb-4">
+                          <span className="material-symbols-outlined align-middle mr-1" style={{ fontSize: 14 }}>schedule</span> {doctor.schedule}
                         </p>
                       )}
 
                       <div className="mt-auto">
                         <button
                           onClick={() => openModal({ doctor: doctor.slug, department: doctor.departmentSlug })}
-                          className="w-full flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
+                          className="w-full flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-base"
                         >
                           <span className="material-symbols-outlined" style={{ fontSize: 15 }}>calendar_today</span>
                           Book Appointment
