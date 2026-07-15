@@ -20,7 +20,7 @@ function StatCard({ stat, triggerCount }: { stat: StatItem; triggerCount: boolea
         <span className="material-symbols-outlined text-white" style={{ fontSize: 28 }}>{iconName}</span>
       </div>
       <div className="flex items-end justify-center gap-1 mb-1">
-        <span className="text-4xl md:text-5xl font-black text-white counter-value tabular-nums">
+        <span className="text-5xl md:text-6xl font-black text-white counter-value tabular-nums">
           {triggerCount ? (
             <CountUp
               end={stat.value}
@@ -32,9 +32,9 @@ function StatCard({ stat, triggerCount }: { stat: StatItem; triggerCount: boolea
             '0'
           )}
         </span>
-        <span className="text-2xl font-black text-accent-300 mb-1">{stat.suffix}</span>
+        <span className="text-3xl font-black text-accent-300 mb-1">{stat.suffix}</span>
       </div>
-      <p className="text-white/75 text-sm font-medium">{stat.label}</p>
+      <p className="text-white/75 text-base font-medium">{stat.label}</p>
     </div>
   )
 }
@@ -54,8 +54,8 @@ export default function StatsSection() {
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-12">
-          <p className="text-accent-300 text-sm font-bold uppercase tracking-widest mb-2">Our Achievement</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+          <p className="text-accent-300 text-base font-bold uppercase tracking-widest mb-2">Our Achievement</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
             Trusted by Millions, Guided by Care
           </h2>
         </div>

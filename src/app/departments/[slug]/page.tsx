@@ -51,24 +51,24 @@ export default function DepartmentPage({ params }: Props) {
                 <Image src={dept.image} alt={dept.name} fill className="object-cover" sizes="(max-width:1024px) 100vw, 66vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
                 <div className="absolute bottom-5 left-5 text-white">
-                  <div className="text-4xl mb-2">{dept.icon}</div>
-                  <h2 className="text-2xl font-extrabold">{dept.name}</h2>
+                  <span className="material-symbols-outlined block mb-2" style={{ fontSize: 40 }}>{dept.icon}</span>
+                  <h2 className="text-3xl font-extrabold">{dept.name}</h2>
                 </div>
               </div>
 
               <SectionLabel>About This Department</SectionLabel>
-              <h2 className="text-2xl font-extrabold text-neutral-800 mb-4">{dept.name} at Tirupoti Balaji Hospital</h2>
+              <h2 className="text-3xl font-extrabold text-neutral-800 mb-4">{dept.name} at Tirupoti Balaji Hospital</h2>
               <p className="text-neutral-600 leading-relaxed mb-8">{dept.description}</p>
 
               {/* Features */}
               {dept.features && (
                 <div className="mb-8">
-                  <h3 className="font-bold text-neutral-800 text-lg mb-4">Department Highlights</h3>
+                  <h3 className="font-bold text-neutral-800 text-xl mb-4">Department Highlights</h3>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {dept.features.map((f) => (
                       <li key={f} className="flex items-center gap-3 bg-primary-50 rounded-xl p-3 border border-primary-100">
                         <span className="material-symbols-outlined text-primary-600 shrink-0" style={{ fontSize: 17 }}>check_circle</span>
-                        <span className="text-sm font-medium text-neutral-700">{f}</span>
+                        <span className="text-base font-medium text-neutral-700">{f}</span>
                       </li>
                     ))}
                   </ul>
@@ -78,10 +78,10 @@ export default function DepartmentPage({ params }: Props) {
               {/* Conditions */}
               {dept.conditions && (
                 <div className="mb-8">
-                  <h3 className="font-bold text-neutral-800 text-lg mb-4">Conditions Treated</h3>
+                  <h3 className="font-bold text-neutral-800 text-xl mb-4">Conditions Treated</h3>
                   <div className="flex flex-wrap gap-2">
                     {dept.conditions.map((c) => (
-                      <span key={c} className="bg-neutral-100 text-neutral-700 text-sm px-3 py-1.5 rounded-full font-medium border border-neutral-200">
+                      <span key={c} className="bg-neutral-100 text-neutral-700 text-base px-3 py-1.5 rounded-full font-medium border border-neutral-200">
                         {c}
                       </span>
                     ))}
@@ -92,10 +92,10 @@ export default function DepartmentPage({ params }: Props) {
               {/* Procedures */}
               {dept.procedures && (
                 <div>
-                  <h3 className="font-bold text-neutral-800 text-lg mb-4">Key Procedures & Treatments</h3>
+                  <h3 className="font-bold text-neutral-800 text-xl mb-4">Key Procedures & Treatments</h3>
                   <div className="flex flex-wrap gap-2">
                     {dept.procedures.map((p) => (
-                      <span key={p} className="bg-secondary-50 text-secondary-700 text-sm px-3 py-1.5 rounded-full font-medium border border-secondary-100">
+                      <span key={p} className="bg-secondary-50 text-secondary-700 text-base px-3 py-1.5 rounded-full font-medium border border-secondary-100">
                         {p}
                       </span>
                     ))}
@@ -108,8 +108,8 @@ export default function DepartmentPage({ params }: Props) {
             <div className="space-y-6">
               {/* Book Appointment */}
               <div className="bg-gradient-to-br from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
-                <h3 className="font-bold text-lg mb-2">Book a Consultation</h3>
-                <p className="text-white/80 text-sm mb-5">Speak with one of our {dept.name} specialists today.</p>
+                <h3 className="font-bold text-xl mb-2">Book a Consultation</h3>
+                <p className="text-white/80 text-base mb-5">Speak with one of our {dept.name} specialists today.</p>
                 <Button href="/contact" variant="outline-white" size="sm">
                   <span className="material-symbols-outlined" style={{ fontSize: 15 }}>calendar_today</span> Schedule Now
                 </Button>
@@ -120,7 +120,7 @@ export default function DepartmentPage({ params }: Props) {
                 <div className="bg-white rounded-2xl border border-neutral-100 p-5 shadow-sm">
                   <h3 className="font-bold text-neutral-800 mb-4 flex items-center justify-between">
                     Our Doctors
-                    <Link href="/find-a-doctor" className="text-xs text-primary-600 font-semibold">View All →</Link>
+                    <Link href="/find-a-doctor" className="text-base text-primary-600 font-semibold">View All →</Link>
                   </h3>
                   <div className="space-y-4">
                     {doctors.map((doc) => (
@@ -129,8 +129,8 @@ export default function DepartmentPage({ params }: Props) {
                           <Image src={doc.image} alt={doc.name} fill className="object-cover object-top" sizes="48px" />
                         </div>
                         <div>
-                          <p className="font-semibold text-neutral-800 text-sm">{doc.name}</p>
-                          <p className="text-xs text-neutral-400">{doc.specialization}</p>
+                          <p className="font-semibold text-neutral-800 text-base">{doc.name}</p>
+                          <p className="text-base text-neutral-400">{doc.specialization}</p>
                         </div>
                       </div>
                     ))}
@@ -140,18 +140,18 @@ export default function DepartmentPage({ params }: Props) {
 
               {/* Other Departments */}
               <div className="bg-neutral-50 rounded-2xl border border-neutral-100 p-5">
-                <h3 className="font-bold text-neutral-800 mb-4 text-sm">Other Departments</h3>
+                <h3 className="font-bold text-neutral-800 mb-4 text-base">Other Departments</h3>
                 <div className="space-y-1">
                   {departmentsData.filter(d => d.slug !== dept.slug).slice(0, 8).map((d) => (
                     <Link
                       key={d.slug}
                       href={`/departments/${d.slug}`}
-                      className="flex items-center gap-2 text-sm text-neutral-600 hover:text-primary-600 py-1.5 hover:pl-1 transition-all"
+                      className="flex items-center gap-2 text-base text-neutral-600 hover:text-primary-600 py-1.5 hover:pl-1 transition-all"
                     >
-                      <span>{d.icon}</span> {d.name} <span className="material-symbols-outlined ml-auto" style={{ fontSize: 12 }}>arrow_forward</span>
+                      <span className="material-symbols-outlined text-primary-500" style={{ fontSize: 18 }}>{d.icon}</span> {d.name} <span className="material-symbols-outlined ml-auto" style={{ fontSize: 12 }}>arrow_forward</span>
                     </Link>
                   ))}
-                  <Link href="/departments" className="text-xs text-primary-600 font-semibold block pt-2">
+                  <Link href="/departments" className="text-base text-primary-600 font-semibold block pt-2">
                     All Departments →
                   </Link>
                 </div>

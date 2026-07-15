@@ -11,7 +11,7 @@ export default function DoctorsSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
             <SectionLabel>Our Experts</SectionLabel>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 leading-tight">
               Meet Our <span className="gradient-text">Experienced Doctors</span>
             </h2>
           </div>
@@ -41,24 +41,24 @@ export default function DoctorsSection() {
                   </div>
                 </div>
                 {/* Experience badge */}
-                <div className="absolute -bottom-1 -right-1 bg-accent-500 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow">
+                <div className="absolute -bottom-1 -right-1 bg-accent-500 text-white text-base font-bold px-2 py-0.5 rounded-full shadow">
                   {doctor.experience}y
                 </div>
               </div>
 
-              <h3 className="font-bold text-neutral-800 text-sm mb-1 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-bold text-neutral-800 text-base mb-1 group-hover:text-primary-600 transition-colors">
                 {doctor.name}
               </h3>
-              <p className="text-xs text-secondary-600 font-semibold mb-1">
+              <p className="text-base text-secondary-600 font-semibold mb-1">
                 {doctor.specialization}
               </p>
-              <p className="text-xs text-neutral-400 mb-4 leading-snug">
+              <p className="text-base text-neutral-400 mb-4 leading-snug">
                 {doctor.qualification}
               </p>
 
               {/* Book button */}
-              <button className="inline-flex items-center gap-1 text-xs text-primary-600 border border-primary-200 rounded-full px-3 py-1.5 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all font-semibold group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600">
-                <span className="material-symbols-outlined" style={{ fontSize: 11 }}>calendar_today</span>
+              <button className="inline-flex items-center gap-1 text-base text-primary-600 border border-primary-200 rounded-full px-3 py-1.5 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all font-semibold group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600">
+                <span className="material-symbols-outlined" style={{ fontSize: 14 }}>calendar_today</span>
                 Book
               </button>
             </Link>

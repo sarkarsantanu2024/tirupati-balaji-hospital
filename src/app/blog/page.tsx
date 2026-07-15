@@ -37,22 +37,22 @@ export default function BlogPage() {
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary-900/20 lg:bg-none" />
-              <span className="absolute top-4 left-4 bg-accent-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
+              <span className="absolute top-4 left-4 bg-accent-500 text-white text-base font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
                 Featured
               </span>
             </div>
             <div className="p-8 lg:p-10 flex flex-col justify-center">
-              <span className="text-xs font-bold text-secondary-600 uppercase tracking-widest mb-3">{featured.category}</span>
-              <h2 className="text-2xl lg:text-3xl font-extrabold text-neutral-800 mb-4 leading-tight group-hover:text-primary-700 transition-colors">
+              <span className="text-base font-bold text-secondary-600 uppercase tracking-widest mb-3">{featured.category}</span>
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-neutral-800 mb-4 leading-tight group-hover:text-primary-700 transition-colors">
                 {featured.title}
               </h2>
-              <p className="text-neutral-500 leading-relaxed mb-6 text-sm">{featured.excerpt}</p>
-              <div className="flex items-center gap-4 text-xs text-neutral-400 mb-6">
+              <p className="text-neutral-500 leading-relaxed mb-6 text-base">{featured.excerpt}</p>
+              <div className="flex items-center gap-4 text-base text-neutral-400 mb-6">
                 <span className="flex items-center gap-1"><span className="material-symbols-outlined" style={{ fontSize: 12 }}>schedule</span> {featured.readTime} min read</span>
                 <span>{formatDate(featured.publishedAt)}</span>
                 <span>By {featured.author}</span>
               </div>
-              <span className="inline-flex items-center gap-2 text-primary-600 font-bold text-sm group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-primary-600 font-bold text-base group-hover:gap-3 transition-all">
                 Read Article <span className="material-symbols-outlined" style={{ fontSize: 15 }}>arrow_forward</span>
               </span>
             </div>
@@ -60,9 +60,9 @@ export default function BlogPage() {
 
           {/* Category Filters */}
           <div className="flex flex-wrap gap-2 mb-8">
-            <span className="px-4 py-2 rounded-full text-sm font-semibold bg-primary-600 text-white">All</span>
+            <span className="px-4 py-2 rounded-full text-base font-semibold bg-primary-600 text-white">All</span>
             {blogCategories.map((cat) => (
-              <span key={cat} className="px-4 py-2 rounded-full text-sm font-semibold bg-white border border-neutral-200 text-neutral-600 cursor-pointer hover:border-primary-300 hover:text-primary-600 transition-all">
+              <span key={cat} className="px-4 py-2 rounded-full text-base font-semibold bg-white border border-neutral-200 text-neutral-600 cursor-pointer hover:border-primary-300 hover:text-primary-600 transition-all">
                 {cat}
               </span>
             ))}
@@ -85,7 +85,7 @@ export default function BlogPage() {
                     sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="bg-white/90 backdrop-blur-sm text-primary-700 text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="bg-white/90 backdrop-blur-sm text-primary-700 text-base font-bold px-2.5 py-1 rounded-full">
                       {post.category}
                     </span>
                   </div>
@@ -94,10 +94,10 @@ export default function BlogPage() {
                   <h3 className="font-bold text-neutral-800 text-base mb-2 leading-snug group-hover:text-primary-700 transition-colors flex-1">
                     {post.title}
                   </h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed mb-4 line-clamp-2">{post.excerpt}</p>
+                  <p className="text-neutral-500 text-base leading-relaxed mb-4 line-clamp-2">{post.excerpt}</p>
 
-                  <div className="flex items-center gap-3 text-xs text-neutral-400 mt-auto pt-4 border-t border-neutral-100">
-                    <span className="flex items-center gap-1"><span className="material-symbols-outlined" style={{ fontSize: 11 }}>schedule</span> {post.readTime} min</span>
+                  <div className="flex items-center gap-3 text-base text-neutral-400 mt-auto pt-4 border-t border-neutral-100">
+                    <span className="flex items-center gap-1"><span className="material-symbols-outlined" style={{ fontSize: 14 }}>schedule</span> {post.readTime} min</span>
                     <span>{formatDate(post.publishedAt)}</span>
                   </div>
                 </div>

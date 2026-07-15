@@ -26,10 +26,10 @@ export default function HealthPackagesPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <SectionLabel align="center">Preventive Health Care</SectionLabel>
-            <h2 className="text-3xl font-extrabold text-neutral-800">
+            <h2 className="text-4xl font-extrabold text-neutral-800">
               Choose Your <span className="gradient-text">Health Package</span>
             </h2>
-            <p className="text-neutral-500 mt-3 max-w-xl mx-auto text-sm">
+            <p className="text-neutral-500 mt-3 max-w-xl mx-auto text-base">
               All packages include a detailed wellness report and physician consultation. Home sample collection available on request.
             </p>
           </div>
@@ -54,26 +54,26 @@ export default function HealthPackagesPage() {
                 )}>
                   {pkg.badge && (
                     <span className={cn(
-                      'absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full',
+                      'absolute top-4 right-4 text-base font-bold px-3 py-1 rounded-full',
                       pkg.highlight
                         ? 'bg-accent-500 text-white'
                         : 'bg-primary-100 text-primary-700'
                     )}>
-                      {pkg.highlight && <span className="material-symbols-outlined inline mr-1" style={{ fontSize: 10 }}>star</span>}
+                      {pkg.highlight && <span className="material-symbols-outlined inline mr-1" style={{ fontSize: 15 }}>star</span>}
                       {pkg.badge}
                     </span>
                   )}
-                  <h3 className={cn('font-extrabold text-xl mb-1', pkg.highlight ? 'text-white' : 'text-neutral-800')}>
+                  <h3 className={cn('font-extrabold text-2xl mb-1', pkg.highlight ? 'text-white' : 'text-neutral-800')}>
                     {pkg.name}
                   </h3>
-                  <p className={cn('text-sm leading-relaxed', pkg.highlight ? 'text-white/80' : 'text-neutral-500')}>
+                  <p className={cn('text-base leading-relaxed', pkg.highlight ? 'text-white/80' : 'text-neutral-500')}>
                     {pkg.description}
                   </p>
                   <div className="mt-4 flex items-baseline gap-1">
-                    <span className={cn('text-3xl font-black', pkg.highlight ? 'text-white' : 'text-primary-700')}>
+                    <span className={cn('text-4xl font-black', pkg.highlight ? 'text-white' : 'text-primary-700')}>
                       ₹{pkg.price.toLocaleString('en-IN')}
                     </span>
-                    <span className={cn('text-sm', pkg.highlight ? 'text-white/70' : 'text-neutral-400')}>
+                    <span className={cn('text-base', pkg.highlight ? 'text-white/70' : 'text-neutral-400')}>
                       / person
                     </span>
                   </div>
@@ -81,12 +81,12 @@ export default function HealthPackagesPage() {
 
                 {/* Includes */}
                 <div className="p-6 flex-1">
-                  <p className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">Package Includes</p>
+                  <p className="text-base font-bold uppercase tracking-wider text-neutral-400 mb-3">Package Includes</p>
                   <ul className="space-y-2.5">
                     {pkg.includes.map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
                         <span className={cn('material-symbols-outlined shrink-0 mt-0.5', pkg.highlight ? 'text-secondary-500' : 'text-secondary-400')} style={{ fontSize: 15 }}>check_circle</span>
-                        <span className="text-sm text-neutral-700">{item}</span>
+                        <span className="text-base text-neutral-700">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -108,8 +108,8 @@ export default function HealthPackagesPage() {
 
           {/* Note */}
           <div className="mt-10 bg-white rounded-2xl p-6 border border-neutral-100 text-center shadow-sm">
-            <p className="text-sm text-neutral-600 mb-3">
-              💡 <strong>Custom Corporate Packages</strong> available for groups of 10 or more. Contact our corporate health desk.
+            <p className="text-base text-neutral-600 mb-3">
+              <span className="material-symbols-outlined align-middle mr-1 text-accent-500" style={{ fontSize: 16 }}>lightbulb</span> <strong>Custom Corporate Packages</strong> available for groups of 10 or more. Contact our corporate health desk.
             </p>
             <Button href="/contact" variant="ghost" size="sm">
               Enquire About Corporate Packages

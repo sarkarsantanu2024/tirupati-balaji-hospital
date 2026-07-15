@@ -40,7 +40,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-neutral-800 mb-2">Our Address</h3>
-                    <p className="text-neutral-600 text-sm leading-relaxed">{contactInfo.address}</p>
+                    <p className="text-neutral-600 text-base leading-relaxed">{contactInfo.address}</p>
                   </div>
                 </div>
               </div>
@@ -55,8 +55,8 @@ export default function ContactPage() {
                     <h3 className="font-bold text-neutral-800 mb-3">Phone Numbers</h3>
                     {contactInfo.phone.map((p) => (
                       <div key={p.label} className="flex justify-between items-center py-2 border-b border-neutral-50 last:border-0">
-                        <span className="text-xs text-neutral-400">{p.label}</span>
-                        <a href={`tel:${p.value.replace(/[\s-]/g, '')}`} className="text-sm font-bold text-primary-700 hover:text-accent-600 transition-colors">
+                        <span className="text-base text-neutral-400">{p.label}</span>
+                        <a href={`tel:${p.value.replace(/[\s-]/g, '')}`} className="text-base font-bold text-primary-700 hover:text-accent-600 transition-colors">
                           {p.value}
                         </a>
                       </div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-neutral-800 mb-1">Email Us</h3>
-                    <a href={`mailto:${contactInfo.email}`} className="text-sm text-primary-600 hover:text-primary-700 transition-colors">
+                    <a href={`mailto:${contactInfo.email}`} className="text-base text-primary-600 hover:text-primary-700 transition-colors">
                       {contactInfo.email}
                     </a>
                   </div>
@@ -90,8 +90,8 @@ export default function ContactPage() {
                     <h3 className="font-bold text-neutral-800 mb-3">Working Hours</h3>
                     {contactInfo.hours.map((h) => (
                       <div key={h.label} className="flex justify-between items-center py-1.5 border-b border-neutral-50 last:border-0">
-                        <span className="text-xs text-neutral-500">{h.label}</span>
-                        <span className="text-xs font-semibold text-neutral-700">{h.value}</span>
+                        <span className="text-base text-neutral-500">{h.label}</span>
+                        <span className="text-base font-semibold text-neutral-700">{h.value}</span>
                       </div>
                     ))}
                   </div>
@@ -100,31 +100,31 @@ export default function ContactPage() {
 
               {/* Emergency */}
               <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-5 text-white text-center">
-                <div className="text-2xl mb-2">🚑</div>
-                <p className="font-bold text-lg mb-1">Emergency Helpline</p>
-                <a href={`tel:${contactInfo.emergencyPhone.replace(/[\s-]/g, '')}`} className="text-2xl font-black">
+                <span className="material-symbols-outlined block mb-2" style={{ fontSize: 26 }}>emergency</span>
+                <p className="font-bold text-xl mb-1">Emergency Helpline</p>
+                <a href={`tel:${contactInfo.emergencyPhone.replace(/[\s-]/g, '')}`} className="text-3xl font-black">
                   {contactInfo.emergencyPhone}
                 </a>
-                <p className="text-white/80 text-xs mt-1">Available 24 × 7</p>
+                <p className="text-white/80 text-base mt-1">Available 24 × 7</p>
               </div>
             </div>
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-neutral-100">
-                <h2 className="text-2xl font-extrabold text-neutral-800 mb-2">Send Us a Message</h2>
-                <p className="text-neutral-500 text-sm mb-8">Fill in the form and our patient care team will get back to you within 2 hours.</p>
+                <h2 className="text-3xl font-extrabold text-neutral-800 mb-2">Send Us a Message</h2>
+                <p className="text-neutral-500 text-base mb-8">Fill in the form and our patient care team will get back to you within 2 hours.</p>
 
                 {submitted ? (
                   <div className="text-center py-16">
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
                       <span className="material-symbols-outlined text-green-600" style={{ fontSize: 40 }}>check_circle</span>
                     </div>
-                    <h3 className="text-xl font-extrabold text-neutral-800 mb-2">Message Sent!</h3>
+                    <h3 className="text-2xl font-extrabold text-neutral-800 mb-2">Message Sent!</h3>
                     <p className="text-neutral-500">Our team will reach out to you shortly.</p>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="mt-6 text-primary-600 font-semibold text-sm underline"
+                      className="mt-6 text-primary-600 font-semibold text-base underline"
                     >
                       Send Another Message
                     </button>
@@ -133,37 +133,37 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-1.5">Full Name *</label>
+                        <label className="block text-base font-semibold text-neutral-700 mb-1.5">Full Name *</label>
                         <input
                           name="name" required value={form.name} onChange={handleChange}
                           placeholder="Your full name"
-                          className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+                          className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-1.5">Phone Number *</label>
+                        <label className="block text-base font-semibold text-neutral-700 mb-1.5">Phone Number *</label>
                         <input
                           name="phone" required value={form.phone} onChange={handleChange}
                           placeholder="Your mobile number"
-                          className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+                          className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-neutral-700 mb-1.5">Email Address</label>
+                      <label className="block text-base font-semibold text-neutral-700 mb-1.5">Email Address</label>
                       <input
                         name="email" type="email" value={form.email} onChange={handleChange}
                         placeholder="your@email.com"
-                        className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
+                        className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-neutral-700 mb-1.5">Department / Specialty</label>
+                      <label className="block text-base font-semibold text-neutral-700 mb-1.5">Department / Specialty</label>
                       <select
                         name="department" value={form.department} onChange={handleChange}
-                        className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
+                        className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition bg-white"
                       >
                         <option value="">Select department (optional)</option>
                         {['Cardiology','Neurology','Orthopaedics','Oncology','Gastroenterology','Gynecology & Obstetrics','Paediatrics','Urology','General Medicine','Other'].map(d => (
@@ -173,11 +173,11 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-neutral-700 mb-1.5">Your Message *</label>
+                      <label className="block text-base font-semibold text-neutral-700 mb-1.5">Your Message *</label>
                       <textarea
                         name="message" required value={form.message} onChange={handleChange}
                         rows={5} placeholder="Please describe your query or concern…"
-                        className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition resize-none"
+                        className="w-full px-4 py-3 border border-neutral-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition resize-none"
                       />
                     </div>
 
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     >
                       Send Message
                     </button>
-                    <p className="text-center text-xs text-neutral-400">
+                    <p className="text-center text-base text-neutral-400">
                       Your information is kept confidential and secure.
                     </p>
                   </form>
@@ -197,14 +197,14 @@ export default function ContactPage() {
               {/* Map placeholder */}
               <div className="mt-6 bg-white rounded-3xl overflow-hidden border border-neutral-100 shadow-sm h-64 flex items-center justify-center">
                 <div className="text-center text-neutral-400">
-                  <div className="text-5xl mb-3">📍</div>
+                  <span className="material-symbols-outlined block mb-3" style={{ fontSize: 48 }}>location_on</span>
                   <p className="font-semibold text-neutral-600">Interactive Map</p>
-                  <p className="text-sm">NH-16 Bypass Road, Vijayawada – 520 008</p>
+                  <p className="text-base">NH-16 Bypass Road, Vijayawada – 520 008</p>
                   <a
                     href="https://maps.google.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-3 text-primary-600 font-semibold text-sm underline"
+                    className="inline-block mt-3 text-primary-600 font-semibold text-base underline"
                   >
                     Open in Google Maps →
                   </a>

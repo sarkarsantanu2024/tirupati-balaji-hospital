@@ -48,10 +48,10 @@ export default function BlogPostPage({ params }: Props) {
               </div>
 
               {/* Meta */}
-              <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-400 mb-6 pb-6 border-b border-neutral-100">
+              <div className="flex flex-wrap items-center gap-4 text-base text-neutral-400 mb-6 pb-6 border-b border-neutral-100">
                 <span className="flex items-center gap-1.5"><span className="material-symbols-outlined" style={{ fontSize: 14 }}>calendar_today</span> {formatDate(post.publishedAt)}</span>
                 <span className="flex items-center gap-1.5"><span className="material-symbols-outlined" style={{ fontSize: 14 }}>schedule</span> {post.readTime} min read</span>
-                <span className="bg-primary-50 text-primary-700 text-xs font-bold px-3 py-1 rounded-full">{post.category}</span>
+                <span className="bg-primary-50 text-primary-700 text-base font-bold px-3 py-1 rounded-full">{post.category}</span>
               </div>
 
               {/* Author */}
@@ -63,13 +63,13 @@ export default function BlogPostPage({ params }: Props) {
                 )}
                 <div>
                   <p className="font-bold text-neutral-800">{post.author}</p>
-                  <p className="text-sm text-neutral-400">{post.category} Specialist, Tirupoti Balaji Hospital</p>
+                  <p className="text-base text-neutral-400">{post.category} Specialist, Tirupoti Balaji Hospital</p>
                 </div>
               </div>
 
               {/* Content placeholder (API will supply real content) */}
               <div className="prose prose-neutral max-w-none">
-                <p className="text-lg text-neutral-700 leading-relaxed font-medium mb-6">{post.excerpt}</p>
+                <p className="text-xl text-neutral-700 leading-relaxed font-medium mb-6">{post.excerpt}</p>
                 <p className="text-neutral-600 leading-relaxed mb-4">
                   This article provides comprehensive insights on {post.title.toLowerCase()}, written by our expert {post.author} at Tirupoti Balaji Hospital.
                   When the API is connected, the full article content will be rendered here from the CMS.
@@ -78,8 +78,8 @@ export default function BlogPostPage({ params }: Props) {
                   Our specialists at Tirupoti Balaji Hospital are committed to providing evidence-based, patient-friendly health information that helps you make informed decisions about your health and wellbeing.
                 </p>
                 <div className="bg-primary-50 border border-primary-100 rounded-2xl p-5 my-6">
-                  <p className="text-primary-700 font-semibold text-sm">
-                    📌 <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Please consult one of our specialist doctors for personalised medical guidance.
+                  <p className="text-primary-700 font-semibold text-base">
+                    <span className="material-symbols-outlined align-middle mr-1" style={{ fontSize: 16 }}>push_pin</span> <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Please consult one of our specialist doctors for personalised medical guidance.
                   </p>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function BlogPostPage({ params }: Props) {
               <div className="flex flex-wrap gap-2 mt-8 pt-6 border-t border-neutral-100">
                 <span className="material-symbols-outlined text-neutral-400 mt-1" style={{ fontSize: 14 }}>sell</span>
                 {post.tags.map((tag) => (
-                  <span key={tag} className="bg-neutral-100 text-neutral-600 text-xs font-medium px-3 py-1.5 rounded-full border border-neutral-200">
+                  <span key={tag} className="bg-neutral-100 text-neutral-600 text-base font-medium px-3 py-1.5 rounded-full border border-neutral-200">
                     {tag}
                   </span>
                 ))}
@@ -96,7 +96,7 @@ export default function BlogPostPage({ params }: Props) {
 
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 mt-8 text-primary-600 font-semibold text-sm hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 mt-8 text-primary-600 font-semibold text-base hover:gap-3 transition-all"
               >
                 <span className="material-symbols-outlined" style={{ fontSize: 15 }}>arrow_back</span> Back to Blog
               </Link>
@@ -115,10 +115,10 @@ export default function BlogPostPage({ params }: Props) {
                           <Image src={p.coverImage} alt={p.title} fill className="object-cover" sizes="64px" />
                         </div>
                         <div>
-                          <p className="font-medium text-sm text-neutral-800 group-hover:text-primary-600 transition-colors leading-snug mb-1">
+                          <p className="font-medium text-base text-neutral-800 group-hover:text-primary-600 transition-colors leading-snug mb-1">
                             {p.title}
                           </p>
-                          <p className="text-xs text-neutral-400">{p.readTime} min read</p>
+                          <p className="text-base text-neutral-400">{p.readTime} min read</p>
                         </div>
                       </Link>
                     ))}
@@ -128,11 +128,11 @@ export default function BlogPostPage({ params }: Props) {
 
               {/* Book CTA */}
               <div className="bg-gradient-to-br from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
-                <h3 className="font-bold text-lg mb-2">Have health concerns?</h3>
-                <p className="text-white/80 text-sm mb-4">Consult one of our expert doctors today.</p>
+                <h3 className="font-bold text-xl mb-2">Have health concerns?</h3>
+                <p className="text-white/80 text-base mb-4">Consult one of our expert doctors today.</p>
                 <Link
                   href="/contact"
-                  className="block text-center bg-white text-primary-700 font-bold text-sm px-4 py-2.5 rounded-xl hover:bg-accent-50 transition-colors"
+                  className="block text-center bg-white text-primary-700 font-bold text-base px-4 py-2.5 rounded-xl hover:bg-accent-50 transition-colors"
                 >
                   Book Appointment
                 </Link>

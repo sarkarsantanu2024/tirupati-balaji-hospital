@@ -11,7 +11,7 @@ export default function DiagnosticsSection() {
       <div className="container-custom">
         <div className="text-center mb-12">
           <SectionLabel align="center">Our Services</SectionLabel>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800">
             Accurate Diagnosis. <span className="gradient-text">Better Care.</span>
           </h2>
         </div>
@@ -29,16 +29,16 @@ export default function DiagnosticsSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/40 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
-                <span className="bg-accent-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
+                <span className="bg-accent-500 text-white text-base font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
                   Featured
                 </span>
-                <h3 className="text-white text-2xl font-extrabold mt-2 drop-shadow-md">{main.title}</h3>
+                <h3 className="text-white text-3xl font-extrabold mt-2 drop-shadow-md">{main.title}</h3>
               </div>
             </div>
-            <p className="text-neutral-600 text-sm leading-relaxed mb-4">{main.description}</p>
+            <p className="text-neutral-600 text-base leading-relaxed mb-4">{main.description}</p>
             <ul className="grid grid-cols-2 gap-2 mb-6">
               {main.bullets?.map((b) => (
-                <li key={b} className="flex items-center gap-2 text-sm text-neutral-700">
+                <li key={b} className="flex items-center gap-2 text-base text-neutral-700">
                   <span className="material-symbols-outlined text-secondary-500 shrink-0" style={{ fontSize: 15 }}>check_circle</span>
                   {b}
                 </li>
@@ -66,7 +66,7 @@ export default function DiagnosticsSection() {
                   <h3 className="font-bold text-neutral-800 mb-1 group-hover:text-primary-700 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-neutral-500 text-base leading-relaxed line-clamp-3">
                     {service.description}
                   </p>
                 </div>
@@ -75,8 +75,8 @@ export default function DiagnosticsSection() {
 
             {/* CTA Card */}
             <div className="bg-gradient-to-r from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
-              <h3 className="font-bold text-lg mb-2 text-white">CT Angiography with Auto-Injector</h3>
-              <p className="text-white/80 text-sm mb-4">
+              <h3 className="font-bold text-xl mb-2 text-white">CT Angiography with Auto-Injector</h3>
+              <p className="text-white/80 text-base mb-4">
                 Fast, precise vascular imaging for timely diagnosis of cardiovascular conditions with patient-friendly contrast delivery.
               </p>
               <Button href="/services/diagnostics" variant="outline-white" size="sm">

@@ -17,7 +17,7 @@ export default function PageHero({ title, subtitle, breadcrumbs = [] }: PageHero
       <div className="container-custom relative z-10">
         {/* Breadcrumbs */}
         {breadcrumbs.length > 0 && (
-          <nav className="flex items-center gap-1.5 text-sm text-white/70 mb-6 flex-wrap">
+          <nav className="flex items-center gap-1.5 text-base text-white/70 mb-6 flex-wrap">
             <Link href="/" className="hover:text-white flex items-center gap-1 transition-colors">
               <span className="material-symbols-outlined" style={{ fontSize: 14 }}>home</span>
               <span>Home</span>
@@ -37,11 +37,11 @@ export default function PageHero({ title, subtitle, breadcrumbs = [] }: PageHero
           </nav>
         )}
 
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg text-white/80 max-w-2xl leading-relaxed">{subtitle}</p>
+          <p className="text-xl text-white/80 max-w-2xl leading-relaxed">{subtitle}</p>
         )}
       </div>
 

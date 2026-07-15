@@ -32,11 +32,11 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="flex items-center gap-1 text-white/80 hover:text-accent-300 transition-colors whitespace-nowrap text-[11px]"
+              className="flex items-center gap-1 text-white/80 hover:text-accent-300 transition-colors whitespace-nowrap text-base"
             >
               <span
                 className="material-symbols-outlined"
-                style={{ fontSize: 10 }}
+                style={{ fontSize: 15 }}
               >
                 phone
               </span>
@@ -47,7 +47,7 @@ export default function Header() {
       </div>
 
       {/* Top Bar – Desktop */}
-      <div className="bg-primary-800 text-white text-sm py-2 hidden lg:block">
+      <div className="bg-primary-800 text-white text-base py-2 hidden lg:block">
         <div className="flex items-center justify-between px-10">
           <div className="flex items-center gap-6">
             {topBarLinks.map((link) => (
@@ -58,7 +58,7 @@ export default function Header() {
               >
                 <span
                   className="material-symbols-outlined"
-                  style={{ fontSize: 13 }}
+                  style={{ fontSize: 15 }}
                 >
                   phone
                 </span>
@@ -66,7 +66,7 @@ export default function Header() {
               </a>
             ))}
           </div>
-          <div className="flex items-center gap-4 text-white/70 text-xs">
+          <div className="flex items-center gap-4 text-white/70 text-base">
             <span>Emergency: Available 24×7</span>
             <span className="w-px h-4 bg-white/20" />
             <a
@@ -104,7 +104,7 @@ export default function Header() {
               className="w-12 h-12 rounded-xl object-cover shrink-0"
             />
             <div className="hidden sm:block leading-tight">
-              <div className="font-extrabold text-primary-700 text-lg leading-none">
+              <div className="font-extrabold text-primary-700 text-xl leading-none">
                 Tirupoti Balaji
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Header() {
                 key={item.label}
                 aria-disabled="true"
                 title="Coming soon"
-                className="flex items-center px-3 py-2 rounded-lg font-semibold text-sm text-neutral-400 cursor-not-allowed select-none"
+                className="flex items-center px-3 py-2 rounded-lg font-semibold text-base text-neutral-400 cursor-not-allowed select-none"
               >
                 {item.label}
               </span>
@@ -139,7 +139,7 @@ export default function Header() {
             </button>
             <button
               onClick={() => openModal()}
-              className="flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-300 shadow-button hover:shadow-lg hover:-translate-y-0.5 text-sm"
+              className="flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-300 shadow-button hover:shadow-lg hover:-translate-y-0.5 text-base"
             >
               <span
                 className="material-symbols-outlined"
@@ -201,7 +201,7 @@ export default function Header() {
         >
           {/* Drawer Header */}
           <div className="flex items-center justify-between p-5 border-b border-neutral-100 bg-gradient-to-r from-primary-600 to-secondary-500">
-            <span className="font-bold text-white text-lg">Menu</span>
+            <span className="font-bold text-white text-xl">Menu</span>
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="p-1.5 rounded-lg bg-white/20 text-white hover:bg-white/30 transition-colors"
@@ -248,7 +248,7 @@ export default function Header() {
             </button>
             <a
               href="tel:08662500108"
-              className="w-full flex items-center justify-center gap-2 border-2 border-primary-200 text-primary-600 font-semibold py-3 rounded-xl hover:bg-primary-50 transition-colors text-sm"
+              className="w-full flex items-center justify-center gap-2 border-2 border-primary-200 text-primary-600 font-semibold py-3 rounded-xl hover:bg-primary-50 transition-colors text-base"
             >
               <span
                 className="material-symbols-outlined"

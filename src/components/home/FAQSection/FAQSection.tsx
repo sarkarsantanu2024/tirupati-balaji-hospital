@@ -31,7 +31,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
         'overflow-hidden transition-all duration-300',
         isOpen ? 'max-h-96' : 'max-h-0'
       )}>
-        <div className="px-5 pb-5 text-neutral-600 text-sm leading-relaxed bg-white border-t border-neutral-100 pt-4">
+        <div className="px-5 pb-5 text-neutral-600 text-base leading-relaxed bg-white border-t border-neutral-100 pt-4">
           {answer}
         </div>
       </div>
@@ -49,23 +49,23 @@ export default function FAQSection() {
           {/* Left Text */}
           <div className="lg:col-span-2">
             <SectionLabel>FAQs</SectionLabel>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800 mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 mb-4 leading-tight">
               Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
-            <p className="text-neutral-500 text-sm leading-relaxed mb-6">
+            <p className="text-neutral-500 text-base leading-relaxed mb-6">
               Have questions about our services, doctors, or facilities? Find quick answers to the
               most common queries below.
             </p>
             <div className="bg-gradient-to-br from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
-              <p className="font-bold text-lg mb-2">Still have questions?</p>
-              <p className="text-white/80 text-sm mb-4">
+              <p className="font-bold text-xl mb-2">Still have questions?</p>
+              <p className="text-white/80 text-base mb-4">
                 Our patient care team is available 24×7 to assist you.
               </p>
               <a
                 href="tel:08662500108"
-                className="inline-flex items-center gap-2 bg-white text-primary-700 font-bold text-sm px-4 py-2.5 rounded-full hover:bg-accent-50 transition-colors"
+                className="inline-flex items-center gap-2 bg-white text-primary-700 font-bold text-base px-4 py-2.5 rounded-full hover:bg-accent-50 transition-colors"
               >
-                📞 Call 0866-250-0108
+                <span className="material-symbols-outlined" style={{ fontSize: 16 }}>call</span> Call 0866-250-0108
               </a>
             </div>
           </div>

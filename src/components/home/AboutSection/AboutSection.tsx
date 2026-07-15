@@ -19,7 +19,7 @@ export default function AboutSection() {
           {/* Text */}
           <div>
             <SectionLabel>About Us</SectionLabel>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-800 mb-5 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 mb-5 leading-tight">
               Welcome to{' '}
               <span className="gradient-text">Tirupoti Balaji Hospital</span>
             </h2>
@@ -38,7 +38,7 @@ export default function AboutSection() {
               {highlights.map((h) => (
                 <li key={h} className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-secondary-500 shrink-0" style={{ fontSize: 17, fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                  <span className="text-sm font-medium text-neutral-700">{h}</span>
+                  <span className="text-base font-medium text-neutral-700">{h}</span>
                 </li>
               ))}
             </ul>
@@ -63,17 +63,17 @@ export default function AboutSection() {
 
             {/* Floating stat cards */}
             <div className="absolute -bottom-5 left-5 bg-white rounded-2xl shadow-card px-5 py-4 flex items-center gap-4 border border-neutral-100">
-              <div className="text-3xl">⭐</div>
+              <span className="material-symbols-outlined text-accent-500" style={{ fontSize: 32, fontVariationSettings: "'FILL' 1" }}>star</span>
               <div>
-                <p className="text-2xl font-extrabold text-primary-700 leading-none">52K+</p>
-                <p className="text-xs text-neutral-400 mt-1">Five-Star Reviews</p>
+                <p className="text-3xl font-extrabold text-primary-700 leading-none">52K+</p>
+                <p className="text-base text-neutral-400 mt-1">Five-Star Reviews</p>
               </div>
             </div>
             <div className="absolute -top-5 right-5 bg-white rounded-2xl shadow-card px-5 py-4 flex items-center gap-4 border border-neutral-100">
-              <div className="text-3xl">🏅</div>
+              <span className="material-symbols-outlined text-secondary-600" style={{ fontSize: 32 }}>workspace_premium</span>
               <div>
-                <p className="text-2xl font-extrabold text-secondary-600 leading-none">NABH</p>
-                <p className="text-xs text-neutral-400 mt-1">Accredited Hospital</p>
+                <p className="text-3xl font-extrabold text-secondary-600 leading-none">NABH</p>
+                <p className="text-base text-neutral-400 mt-1">Accredited Hospital</p>
               </div>
             </div>
           </div>

@@ -93,16 +93,16 @@ export default function HeroBanner({ slides }: HeroBannerProps) {
                   <div className="max-w-xl">
                     {/* Video badge */}
                     {slide.type === 'video' && (
-                      <div className="inline-flex items-center gap-2 bg-accent-500/90 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">
-                        <span className="material-symbols-outlined" style={{ fontSize: 11, fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      <div className="inline-flex items-center gap-2 bg-accent-500/90 text-white text-base font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wider">
+                        <span className="material-symbols-outlined" style={{ fontSize: 14, fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
                         Video Tour
                       </div>
                     )}
 
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.15] mb-5 drop-shadow-md">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] mb-5 drop-shadow-md">
                       {slide.title}
                     </h1>
-                    <p className="text-base md:text-lg text-white/85 leading-relaxed mb-8 max-w-lg">
+                    <p className="text-base md:text-xl text-white/85 leading-relaxed mb-8 max-w-lg">
                       {slide.subtitle}
                     </p>
 
@@ -147,16 +147,16 @@ export default function HeroBanner({ slides }: HeroBannerProps) {
         <div className="container-custom">
           <div className="bg-white/95 backdrop-blur-md rounded-t-2xl shadow-lg px-8 py-4 flex items-center justify-around divide-x divide-neutral-200">
             {[
-              { icon: '⭐', label: '28+ Years of Excellence', value: 'Est. 1996' },
-              { icon: '👨‍⚕️', label: 'Expert Doctors', value: '150+' },
-              { icon: '🏥', label: 'Specialties', value: '22+' },
-              { icon: '❤️', label: 'Happy Patients', value: '42 Lakh+' },
+              { icon: 'workspace_premium', label: '28+ Years of Excellence', value: 'Est. 1996' },
+              { icon: 'stethoscope', label: 'Expert Doctors', value: '150+' },
+              { icon: 'local_hospital', label: 'Specialties', value: '22+' },
+              { icon: 'favorite', label: 'Happy Patients', value: '42 Lakh+' },
             ].map((stat) => (
               <div key={stat.label} className="flex items-center gap-3 px-6">
-                <span className="text-2xl">{stat.icon}</span>
+                <span className="material-symbols-outlined text-primary-600" style={{ fontSize: 30 }}>{stat.icon}</span>
                 <div>
-                  <div className="font-extrabold text-primary-700 text-lg leading-none">{stat.value}</div>
-                  <div className="text-xs text-neutral-500 mt-0.5">{stat.label}</div>
+                  <div className="font-extrabold text-primary-700 text-xl leading-none">{stat.value}</div>
+                  <div className="text-base text-neutral-500 mt-0.5">{stat.label}</div>
                 </div>
               </div>
             ))}
