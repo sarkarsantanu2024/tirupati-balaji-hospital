@@ -13,12 +13,12 @@ export default function WhyChooseUs() {
             <div className="relative rounded-3xl overflow-hidden shadow-card-hover aspect-[4/3]">
               <Image
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80&fit=crop"
-                alt="Tirupoti Balaji Hospital team"
+                alt="Tirupati Balaji Health Care Group team"
                 fill
                 className="object-cover"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-royal-900/30 to-transparent" />
             </div>
 
             {/* Floating Badge */}
@@ -36,12 +36,12 @@ export default function WhyChooseUs() {
           <div>
             <SectionLabel>Why Choose Us</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 mb-4 leading-tight">
-              Why Tirupoti Balaji Is{' '}
-              <span className="gradient-text">Andhra Pradesh&apos;s</span>{' '}
+              Why Tirupati Balaji Health Care Group Is{' '}
+              <span className="gradient-text">Kolkata&apos;s</span>{' '}
               Most Trusted Hospital?
             </h2>
             <p className="text-neutral-600 text-base leading-relaxed mb-8">
-              Tirupoti Balaji Multi-Specialty Hospital combines 28 years of clinical experience with
+              Tirupati Balaji Health Care Group combines 28 years of clinical experience with
               state-of-the-art technology and a team of 150+ specialist doctors, delivering the
               highest standards of healthcare across all medical and surgical disciplines — all
               under one roof in Vijayawada.

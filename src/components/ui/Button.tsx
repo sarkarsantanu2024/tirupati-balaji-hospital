@@ -18,7 +18,7 @@ interface ButtonProps {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    'bg-accent-500 hover:bg-accent-600 text-white shadow-button hover:shadow-lg hover:-translate-y-0.5',
+    'bg-accent-500 hover:bg-accent-600 text-white hover:-translate-y-0.5',
   secondary:
     'bg-white hover:bg-primary-50 text-primary-600 border border-primary-200 hover:border-primary-400',
   'outline-white':

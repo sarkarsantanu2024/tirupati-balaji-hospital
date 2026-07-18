@@ -21,15 +21,15 @@ export default function AboutSection() {
             <SectionLabel>About Us</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 mb-5 leading-tight">
               Welcome to{' '}
-              <span className="gradient-text">Tirupoti Balaji Hospital</span>
+              <span className="gradient-text">Tirupati Balaji Health Care Group</span>
             </h2>
             <p className="text-neutral-600 text-base leading-relaxed mb-4">
-              Tirupoti Balaji Multi-Specialty Hospital is a premier, comprehensive healthcare
+              Tirupati Balaji Health Care Group is a premier, comprehensive healthcare
               institution equipped with state-of-the-art diagnostic imaging, modern modular
               operation theatres, and over 150 specialist doctors across 22 departments.
             </p>
             <p className="text-neutral-600 text-base leading-relaxed mb-6">
-              Founded in 1996 with a mission to bring world-class tertiary care to Andhra Pradesh,
+              Founded in 1996 with a mission to bring world-class tertiary care to Kolkata,
               we have grown to serve over 42 lakh patients — consistently delivering excellence in
               clinical care, patient safety, and compassionate service.
             </p>
@@ -53,12 +53,12 @@ export default function AboutSection() {
             <div className="relative rounded-3xl overflow-hidden shadow-card-hover aspect-[4/3]">
               <Image
                 src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80&fit=crop"
-                alt="Tirupoti Balaji Hospital building"
+                alt="Tirupati Balaji Health Care Group building"
                 fill
                 className="object-cover"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-primary-900/40" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-royal-900/40" />
             </div>
 
             {/* Floating stat cards */}

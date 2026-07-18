@@ -30,18 +30,19 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-5">
               <Image
                 src="/images/brand-logo.jpeg"
-                alt="Tirupoti Balaji Multi-Specialty Hospital"
+                alt="Tirupati Balaji Health Care Group"
                 width={48}
                 height={48}
                 className="w-12 h-12 rounded-xl object-cover shadow-md shrink-0"
               />
-              <div className="leading-tight">
-                <div className="font-extrabold text-white text-base leading-none">Tirupoti Balaji</div>
-                <div className="text-xs text-white/50 font-medium tracking-wide mt-0.5">Multi-Specialty Hospital</div>
+              <div className="leading-tight max-w-[220px]">
+                <div className="font-extrabold text-white text-base leading-tight">
+                  Tirupati Balaji <span className="text-white/70">Health Care Group</span>
+                </div>
               </div>
             </Link>
             <p className="text-neutral-400 text-sm leading-relaxed mb-6">
-              Tirupoti Balaji Multi-Specialty Hospital is dedicated to delivering world-class, compassionate healthcare to the people of Andhra Pradesh since 1996.
+              Tirupati Balaji Health Care Group is dedicated to delivering world-class, compassionate healthcare to the people of Kolkata since 1996.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-3">
@@ -152,7 +153,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
           <p>
-            © {new Date().getFullYear()} Tirupoti Balaji Hospital. All Rights Reserved.
+            © {new Date().getFullYear()} Tirupati Balaji Health Care Group. All Rights Reserved.
           </p>
           <p className="flex items-center gap-1.5">
             Crafted with <span className="material-symbols-outlined text-red-500" style={{ fontSize: 15, fontVariationSettings: "'FILL' 1" }}>favorite</span> for better health

@@ -45,7 +45,7 @@ export default function StatsSection() {
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-16 bg-gradient-to-r from-primary-700 via-primary-600 to-secondary-600 relative overflow-hidden"
+      className="py-16 bg-gradient-to-r from-royal-700 via-royal-600 to-royal-600 relative overflow-hidden"
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10"

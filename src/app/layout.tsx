@@ -7,41 +7,41 @@ import FloatingCTA from '@/components/ui/FloatingCTA'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Tirupoti Balaji Hospital | Multi-Specialty Hospital in Vijayawada',
-    template: '%s | Tirupoti Balaji Hospital',
+    default: 'Tirupati Balaji Health Care Group | Health Care Group in Vijayawada',
+    template: '%s | Tirupati Balaji Health Care Group',
   },
   description:
-    'Tirupoti Balaji Hospital is a premier multi-specialty hospital in Vijayawada, Andhra Pradesh offering advanced cardiology, neurology, oncology, orthopaedics, and 22+ specialties with 150+ expert doctors and 28 years of excellence.',
+    'Tirupati Balaji Health Care Group is a premier multi-specialty hospital in Vijayawada, Kolkata offering advanced cardiology, neurology, oncology, orthopaedics, and 22+ specialties with 150+ expert doctors and 28 years of excellence.',
   keywords: [
     'multi specialty hospital Vijayawada',
-    'best hospital Andhra Pradesh',
-    'Tirupoti Balaji Hospital',
+    'best hospital Kolkata',
+    'Tirupati Balaji Health Care Group',
     'cardiology hospital Vijayawada',
     'cancer treatment Vijayawada',
     'orthopaedics hospital AP',
     'neurology Vijayawada',
   ],
-  authors: [{ name: 'Tirupoti Balaji Hospital' }],
+  authors: [{ name: 'Tirupati Balaji Health Care Group' }],
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    siteName: 'Tirupoti Balaji Hospital',
-    title: 'Tirupoti Balaji Hospital | Multi-Specialty Hospital in Vijayawada',
+    siteName: 'Tirupati Balaji Health Care Group',
+    title: 'Tirupati Balaji Health Care Group | Health Care Group in Vijayawada',
     description:
-      'Advanced healthcare with 150+ specialist doctors across 22 departments. Serving Andhra Pradesh since 1996.',
+      'Advanced healthcare with 150+ specialist doctors across 22 departments. Serving Kolkata since 1996.',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'Tirupoti Balaji Hospital',
+        alt: 'Tirupati Balaji Health Care Group',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tirupoti Balaji Hospital',
-    description: 'Premier multi-specialty healthcare in Vijayawada, Andhra Pradesh',
+    title: 'Tirupati Balaji Health Care Group',
+    description: 'Premier multi-specialty healthcare in Vijayawada, Kolkata',
   },
   robots: { index: true, follow: true },
 }

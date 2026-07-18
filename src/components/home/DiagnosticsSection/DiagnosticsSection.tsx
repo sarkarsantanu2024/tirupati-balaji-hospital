@@ -27,7 +27,7 @@ export default function DiagnosticsSection() {
                 className="object-cover"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-royal-900/90 via-royal-900/40 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
                 <span className="bg-accent-500 text-white text-base font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
                   Featured
@@ -74,7 +74,7 @@ export default function DiagnosticsSection() {
             ))}
 
             {/* CTA Card */}
-            <div className="bg-gradient-to-r from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-r from-royal-600 to-royal-500 rounded-2xl p-6 text-white">
               <h3 className="font-bold text-xl mb-2 text-white">CT Angiography with Auto-Injector</h3>
               <p className="text-white/80 text-base mb-4">
                 Fast, precise vascular imaging for timely diagnosis of cardiovascular conditions with patient-friendly contrast delivery.

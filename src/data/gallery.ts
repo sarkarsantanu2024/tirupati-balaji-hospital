@@ -11,7 +11,7 @@ export const galleryCategories: { label: string; value: GalleryCategory }[] = [
 ]
 
 export const galleryItems: GalleryItem[] = [
-  { id: 'g1', src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80&fit=crop', alt: 'Hospital main building', category: 'infrastructure', caption: 'Tirupoti Balaji Hospital – Main Building' },
+  { id: 'g1', src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80&fit=crop', alt: 'Hospital main building', category: 'infrastructure', caption: 'Tirupati Balaji Health Care Group – Main Building' },
   { id: 'g2', src: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80&fit=crop', alt: 'Hospital reception area', category: 'infrastructure', caption: 'Welcoming Reception & Atrium' },
   { id: 'g3', src: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80&fit=crop', alt: 'Modern operation theatre', category: 'operation-theatre', caption: 'Modular Operation Theatre' },
   { id: 'g4', src: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=80&fit=crop', alt: 'Robotic surgery suite', category: 'operation-theatre', caption: 'Robotic Surgery Suite' },

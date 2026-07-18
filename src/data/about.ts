@@ -1,8 +1,8 @@
 export const aboutData = {
   hero: {
-    title: 'Welcome to Tirupoti Balaji Hospital',
+    title: 'Welcome to Tirupati Balaji Health Care Group',
     subtitle:
-      'Tirupoti Balaji Multi-Specialty Hospital is a premier, patient-centric healthcare institution equipped with advanced diagnostic imaging, modern operation theatres, and a distinguished panel of specialists — all united by a single mission: to restore health and improve lives.',
+      'Tirupati Balaji Health Care Group is a premier, patient-centric healthcare institution equipped with advanced diagnostic imaging, modern operation theatres, and a distinguished panel of specialists — all united by a single mission: to restore health and improve lives.',
     image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80&fit=crop',
     highlights: [
       'ISO 9001:2015 Certified',
@@ -15,9 +15,9 @@ export const aboutData = {
   story: {
     title: 'Our Story',
     paragraphs: [
-      'Tirupoti Balaji Hospital was founded in 1996 with a bold vision: to bring world-class tertiary healthcare to the people of Andhra Pradesh, eliminating the need to travel to metropolitan cities for advanced medical treatment.',
+      'Tirupati Balaji Health Care Group was founded in 1996 with a bold vision: to bring world-class tertiary healthcare to the people of Kolkata, eliminating the need to travel to metropolitan cities for advanced medical treatment.',
       'Built on the foundational belief that quality healthcare is a fundamental right and not a privilege, the hospital has grown from a 60-bed community hospital to a 350-bed multi-specialty tertiary care centre serving over 4.2 million patients across AP and Telangana.',
-      'Today, with a team of 150+ specialist doctors, 800+ clinical and paramedical staff, and 22 departments, Tirupoti Balaji Hospital stands as the most trusted healthcare institution in the Krishna and Guntur districts.',
+      'Today, with a team of 150+ specialist doctors, 800+ clinical and paramedical staff, and 22 departments, Tirupati Balaji Health Care Group stands as the most trusted healthcare institution in the Krishna and Guntur districts.',
     ],
     image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80&fit=crop',
   },
@@ -46,7 +46,7 @@ export const aboutData = {
         'The hospital launched as a diagnostic and polyclinic centre housing advanced pathology, microbiology, biochemistry, and radiology services, quickly becoming the region\'s preferred diagnostic hub.',
     },
     {
-      phase: 'Phase II – Multi-Specialty Hospital (2004)',
+      phase: 'Phase II – Health Care Group (2004)',
       description:
         'Expansion into a full-fledged multi-specialty hospital with surgical suites, ICU, and specialist OPDs covering Cardiology, Neurology, Orthopaedics, and Oncology.',
     },

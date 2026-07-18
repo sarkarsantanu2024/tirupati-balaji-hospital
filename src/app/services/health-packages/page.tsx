@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Health Packages',
-  description: 'Preventive health check-up packages at Tirupoti Balaji Hospital — from basic wellness to comprehensive cancer screening and executive health assessments.',
+  description: 'Preventive health check-up packages at Tirupati Balaji Health Care Group — from basic wellness to comprehensive cancer screening and executive health assessments.',
 }
 
 export default function HealthPackagesPage() {
@@ -49,7 +49,7 @@ export default function HealthPackagesPage() {
                 <div className={cn(
                   'p-6 relative',
                   pkg.highlight
-                    ? 'bg-gradient-to-r from-primary-600 to-secondary-500 text-white'
+                    ? 'bg-gradient-to-r from-royal-600 to-royal-500 text-white'
                     : 'bg-neutral-50 border-b border-neutral-100'
                 )}>
                   {pkg.badge && (

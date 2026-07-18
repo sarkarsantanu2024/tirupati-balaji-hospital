@@ -20,7 +20,7 @@ export default function GalleryPage() {
     <>
       <PageHero
         title="Gallery"
-        subtitle="Take a look inside Tirupoti Balaji Hospital — our state-of-the-art infrastructure, operation theatres, ICU, and patient care areas."
+        subtitle="Take a look inside Tirupati Balaji Health Care Group — our state-of-the-art infrastructure, operation theatres, ICU, and patient care areas."
         breadcrumbs={[{ label: 'Gallery' }]}
       />
 
@@ -61,7 +61,7 @@ export default function GalleryPage() {
                 />
                 <div className="absolute inset-0 bg-primary-900/0 group-hover:bg-primary-900/40 transition-colors" />
                 {item.caption && (
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary-900/80 to-transparent p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-royal-900/80 to-transparent p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <p className="text-white text-base font-medium">{item.caption}</p>
                   </div>
                 )}
