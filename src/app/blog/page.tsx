@@ -7,7 +7,7 @@ import { formatDate } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Health Blog',
-  description: 'Health tips, medical insights, and expert advice from the specialist doctors at Tirupoti Balaji Hospital.',
+  description: 'Health tips, medical insights, and expert advice from the specialist doctors at Tirupati Balaji Health Care Group.',
 }
 
 export default function BlogPage() {
@@ -36,7 +36,7 @@ export default function BlogPage() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width:1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary-900/20 lg:bg-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-royal-900/20 lg:bg-none" />
               <span className="absolute top-4 left-4 bg-accent-500 text-white text-base font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
                 Featured
               </span>

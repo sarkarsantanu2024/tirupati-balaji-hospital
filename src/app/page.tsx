@@ -12,9 +12,9 @@ import TestimonialsSection from '@/components/home/TestimonialsSection/Testimoni
 import { bannerSlides } from '@/data/home'
 
 export const metadata: Metadata = {
-  title: 'Tirupoti Balaji Hospital | Multi-Specialty Hospital in Vijayawada',
+  title: 'Tirupati Balaji Health Care Group | Health Care Group in Vijayawada',
   description:
-    'Premier multi-specialty hospital in Vijayawada, Andhra Pradesh. 150+ expert doctors, 22 specialties, advanced diagnostics, and 28 years of excellence in compassionate patient care.',
+    'Premier multi-specialty hospital in Vijayawada, Kolkata. 150+ expert doctors, 22 specialties, advanced diagnostics, and 28 years of excellence in compassionate patient care.',
 }
 
 export default function HomePage() {

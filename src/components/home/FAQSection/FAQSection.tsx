@@ -56,7 +56,7 @@ export default function FAQSection() {
               Have questions about our services, doctors, or facilities? Find quick answers to the
               most common queries below.
             </p>
-            <div className="bg-gradient-to-br from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-royal-600 to-royal-500 rounded-2xl p-6 text-white">
               <p className="font-bold text-xl mb-2">Still have questions?</p>
               <p className="text-white/80 text-base mb-4">
                 Our patient care team is available 24×7 to assist you.

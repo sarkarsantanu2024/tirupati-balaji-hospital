@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <>
       {/* Top Bar – Mobile */}
-      <div className="bg-primary-800 text-white py-1.5 hidden md:block lg:hidden">
+      <div className="bg-[#252985] text-white py-1.5 hidden md:block lg:hidden">
         <div className="flex items-center justify-center gap-4 overflow-x-auto scrollbar-hide px-10">
           {topBarLinks.map((link) => (
             <a
@@ -47,7 +47,7 @@ export default function Header() {
       </div>
 
       {/* Top Bar – Desktop */}
-      <div className="bg-primary-800 text-white text-base py-2 hidden lg:block">
+      <div className="bg-[#252985] text-white text-base py-2 hidden lg:block">
         <div className="flex items-center justify-between px-10">
           <div className="flex items-center gap-6">
             {topBarLinks.map((link) => (
@@ -70,10 +70,10 @@ export default function Header() {
             <span>Emergency: Available 24×7</span>
             <span className="w-px h-4 bg-white/20" />
             <a
-              href="mailto:info@tirupoticarebalaji.com"
+              href="mailto:tirupatibalaji180524@gmail.com"
               className="hover:text-white transition-colors"
             >
-              info@tirupoticarebalaji.com
+              tirupatibalaji180524@gmail.com
             </a>
           </div>
         </div>
@@ -97,15 +97,15 @@ export default function Header() {
           >
             <Image
               src="/images/brand-logo.jpeg"
-              alt="Tirupoti Balaji Multi-Specialty Hospital"
+              alt="Tirupati Balaji Health Care Group"
               width={48}
               height={48}
               priority
               className="w-12 h-12 rounded-xl object-cover shrink-0"
             />
-            <div className="hidden sm:block leading-tight">
-              <div className="font-extrabold text-primary-700 text-xl leading-none">
-                Tirupoti Balaji
+            <div className="hidden sm:block leading-tight max-w-[240px]">
+              <div className="font-extrabold text-primary-700 text-xl leading-tight">
+                Tirupati Balaji <span className="text-neutral-700">Health Care Group</span>
               </div>
             </div>
           </Link>
@@ -139,7 +139,7 @@ export default function Header() {
             </button>
             <button
               onClick={() => openModal()}
-              className="flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-300 shadow-button hover:shadow-lg hover:-translate-y-0.5 text-base"
+              className="flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 text-base"
             >
               <span
                 className="material-symbols-outlined"
@@ -200,7 +200,7 @@ export default function Header() {
           )}
         >
           {/* Drawer Header */}
-          <div className="flex items-center justify-between p-5 border-b border-neutral-100 bg-gradient-to-r from-primary-600 to-secondary-500">
+          <div className="flex items-center justify-between p-5 border-b border-neutral-100 bg-gradient-to-r from-royal-600 to-royal-500">
             <span className="font-bold text-white text-xl">Menu</span>
             <button
               onClick={() => setMobileMenuOpen(false)}

@@ -38,7 +38,7 @@ export default function DepartmentsSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 via-primary-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-royal-900/70 via-royal-900/20 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-white font-bold text-xl leading-tight">{dept.name}</h3>
                 </div>

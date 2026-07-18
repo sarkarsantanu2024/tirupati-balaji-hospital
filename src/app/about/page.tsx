@@ -8,7 +8,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection/Testimoni
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Tirupoti Balaji Hospital — our 28-year journey, mission, vision, and the technology that makes us Andhra Pradesh\'s most trusted multi-specialty hospital.',
+    'Learn about Tirupati Balaji Health Care Group — our 28-year journey, mission, vision, and the technology that makes us Kolkata\'s most trusted multi-specialty hospital.',
 }
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Us"
-        subtitle="28 years of healing, innovating, and transforming healthcare in Andhra Pradesh."
+        subtitle="28 years of healing, innovating, and transforming healthcare in Kolkata."
         breadcrumbs={[{ label: 'About Us' }]}
       />
 
@@ -30,7 +30,7 @@ export default function AboutPage() {
               <SectionLabel>About Us</SectionLabel>
               <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-800 mb-5 leading-tight">
                 Welcome to{' '}
-                <span className="gradient-text">Tirupoti Balaji Hospital</span>
+                <span className="gradient-text">Tirupati Balaji Health Care Group</span>
               </h2>
               {hero.subtitle.split('. ').map((para, i) => (
                 <p key={i} className="text-neutral-600 text-base leading-relaxed mb-3">{para}.</p>
@@ -82,12 +82,12 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-3xl p-8 text-white">
+            <div className="bg-gradient-to-br from-royal-600 to-royal-800 rounded-3xl p-8 text-white">
               <span className="material-symbols-outlined block mb-4" style={{ fontSize: 40 }}>track_changes</span>
               <h3 className="text-2xl font-extrabold mb-3">{missionVision.mission.title}</h3>
               <p className="text-white/85 leading-relaxed">{missionVision.mission.text}</p>
             </div>
-            <div className="bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-3xl p-8 text-white">
+            <div className="bg-gradient-to-br from-royal-500 to-royal-700 rounded-3xl p-8 text-white">
               <span className="material-symbols-outlined block mb-4" style={{ fontSize: 40 }}>visibility</span>
               <h3 className="text-2xl font-extrabold mb-3">{missionVision.vision.title}</h3>
               <p className="text-white/85 leading-relaxed">{missionVision.vision.text}</p>
@@ -111,7 +111,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <SectionLabel align="center">Our Journey</SectionLabel>
             <h2 className="text-4xl font-extrabold text-neutral-800">
-              Building Blocks of <span className="gradient-text">Tirupoti Balaji</span>
+              Building Blocks of <span className="gradient-text">Tirupati Balaji Health Care Group</span>
             </h2>
           </div>
           <div className="relative">

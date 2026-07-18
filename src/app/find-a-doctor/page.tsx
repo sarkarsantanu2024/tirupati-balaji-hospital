@@ -82,7 +82,7 @@ export default function FindADoctorPage() {
                     className="bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-card hover:border-primary-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
                   >
                     {/* Photo */}
-                    <div className="relative h-52 bg-gradient-to-br from-primary-50 to-secondary-50">
+                    <div className="relative h-52 bg-gradient-to-br from-royal-50 to-royal-50">
                       <Image
                         src={doctor.image}
                         alt={doctor.name}

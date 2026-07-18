@@ -7,7 +7,7 @@ import { diagnosticServicesData } from '@/data/services'
 
 export const metadata: Metadata = {
   title: 'Diagnostic Services',
-  description: 'World-class diagnostic services at Tirupoti Balaji Hospital — 3T MRI, 128-Slice CT, 4D USG, Pathology, Cardiology Diagnostics and more, available 24×7.',
+  description: 'World-class diagnostic services at Tirupati Balaji Health Care Group — 3T MRI, 128-Slice CT, 4D USG, Pathology, Cardiology Diagnostics and more, available 24×7.',
 }
 
 export default function DiagnosticsPage() {
@@ -56,7 +56,7 @@ export default function DiagnosticsPage() {
                 {/* Image */}
                 <div className={`relative rounded-3xl overflow-hidden h-72 shadow-card ${i % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <Image src={service.image ?? ''} alt={service.title} fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-royal-900/50 to-transparent" />
                   <h3 className="absolute bottom-5 left-5 text-white font-extrabold text-3xl">{service.title}</h3>
                 </div>
 

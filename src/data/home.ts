@@ -36,7 +36,7 @@ export const bannerSlides: BannerSlide[] = [
     src: '/videos/hospital-tour.mp4',
     poster: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1600&q=85&fit=crop',
     title: 'Healing with Innovation & Dedication',
-    subtitle: 'Take a virtual tour of our world-class facilities and experience the Tirupoti Balaji Hospital difference.',
+    subtitle: 'Take a virtual tour of our world-class facilities and experience the Tirupati Balaji Health Care Group difference.',
     ctaPrimary: { label: 'Virtual Tour', href: '/gallery' },
     ctaSecondary: { label: 'Contact Us', href: '/contact' },
   },
@@ -158,7 +158,7 @@ export const facilitiesData: Facility[] = [
   {
     id: 'fac-12',
     title: 'Telemedicine',
-    description: 'Remote consultation services connecting patients across Andhra Pradesh and Telangana with our specialist doctors online.',
+    description: 'Remote consultation services connecting patients across Kolkata and Telangana with our specialist doctors online.',
     icon: 'video',
   },
 ]
@@ -209,13 +209,13 @@ export const diagnosticServicesHome: DiagnosticService[] = [
 export const faqData: FAQItem[] = [
   {
     id: 'faq-1',
-    question: 'What specialties are available at Tirupoti Balaji Hospital?',
+    question: 'What specialties are available at Tirupati Balaji Health Care Group?',
     answer: 'We offer over 22 specialties including Cardiology, Neurology, Oncology, Orthopaedics, Gastroenterology, Gynecology, Paediatrics, Urology, Nephrology, Ophthalmology, ENT, and many more — all under one roof.',
   },
   {
     id: 'faq-2',
     question: 'Does the hospital provide cashless insurance treatment?',
-    answer: 'Yes. Tirupoti Balaji Hospital has tie-ups with 300+ insurance companies and TPA organisations. Our dedicated insurance desk will guide you through the pre-authorisation process to ensure a smooth cashless experience.',
+    answer: 'Yes. Tirupati Balaji Health Care Group has tie-ups with 300+ insurance companies and TPA organisations. Our dedicated insurance desk will guide you through the pre-authorisation process to ensure a smooth cashless experience.',
   },
   {
     id: 'faq-3',
@@ -235,7 +235,7 @@ export const faqData: FAQItem[] = [
   {
     id: 'faq-6',
     question: 'Do you have facilities for international patients?',
-    answer: 'Tirupoti Balaji Hospital has a dedicated International Patient Services desk that assists with visa letters, accommodation, airport transfers, interpreter services, and medical tourism packages tailored to individual requirements.',
+    answer: 'Tirupati Balaji Health Care Group has a dedicated International Patient Services desk that assists with visa letters, accommodation, airport transfers, interpreter services, and medical tourism packages tailored to individual requirements.',
   },
 ]
 
@@ -245,7 +245,7 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 'test-1',
     name: 'Ravi Kumar Reddy',
-    text: 'I underwent a total knee replacement at Tirupoti Balaji Hospital and the experience was exceptional. The orthopaedic team, nursing staff, and physiotherapists together ensured I was back on my feet ahead of schedule. The clean facilities and attentive care made all the difference.',
+    text: 'I underwent a total knee replacement at Tirupati Balaji Health Care Group and the experience was exceptional. The orthopaedic team, nursing staff, and physiotherapists together ensured I was back on my feet ahead of schedule. The clean facilities and attentive care made all the difference.',
     rating: 5,
     date: 'February 2025',
     avatar: 'https://ui-avatars.com/api/?name=Ravi+Kumar&background=0057A8&color=fff&size=80',
@@ -269,7 +269,7 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 'test-4',
     name: 'Priya Venkataraman',
-    text: 'I delivered my baby at Tirupoti Balaji\'s birthing suite and the entire maternity team was incredibly supportive throughout. From pre-natal scans to post-partum care, every step was handled with warmth and expertise. Highly recommended for expecting mothers.',
+    text: 'I delivered my baby at Tirupati Balaji Health Care Group\'s birthing suite and the entire maternity team was incredibly supportive throughout. From pre-natal scans to post-partum care, every step was handled with warmth and expertise. Highly recommended for expecting mothers.',
     rating: 5,
     date: 'December 2024',
     avatar: 'https://ui-avatars.com/api/?name=Priya+V&background=0057A8&color=fff&size=80',
@@ -277,7 +277,7 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 'test-5',
     name: 'Dr. Anil Kumar Sharma',
-    text: 'As a referring physician from Nellore, I consistently send my complex cases to Tirupoti Balaji Hospital for tertiary care. The specialist teams communicate proactively, share detailed reports, and my patients always return with excellent outcomes. A truly professional institution.',
+    text: 'As a referring physician from Nellore, I consistently send my complex cases to Tirupati Balaji Health Care Group for tertiary care. The specialist teams communicate proactively, share detailed reports, and my patients always return with excellent outcomes. A truly professional institution.',
     rating: 5,
     date: 'April 2025',
     avatar: 'https://ui-avatars.com/api/?name=Anil+Sharma&background=009B8A&color=fff&size=80',

@@ -6,7 +6,7 @@ import { departmentsData } from '@/data/departments'
 
 export const metadata: Metadata = {
   title: 'Departments',
-  description: 'Explore all 22+ medical departments at Tirupoti Balaji Hospital — from Cardiology and Neurology to Oncology, Orthopaedics, and more.',
+  description: 'Explore all 22+ medical departments at Tirupati Balaji Health Care Group — from Cardiology and Neurology to Oncology, Orthopaedics, and more.',
 }
 
 export default function DepartmentsPage() {
@@ -35,7 +35,7 @@ export default function DepartmentsPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-royal-900/60 to-transparent" />
                   <span className="material-symbols-outlined absolute top-3 left-3 text-white" style={{ fontSize: 32 }}>{dept.icon}</span>
                   <div className="absolute bottom-3 left-3 right-3">
                     <h3 className="text-white font-bold text-base leading-tight">{dept.name}</h3>

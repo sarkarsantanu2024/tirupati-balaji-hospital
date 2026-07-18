@@ -63,7 +63,7 @@ export default function BlogPostPage({ params }: Props) {
                 )}
                 <div>
                   <p className="font-bold text-neutral-800">{post.author}</p>
-                  <p className="text-base text-neutral-400">{post.category} Specialist, Tirupoti Balaji Hospital</p>
+                  <p className="text-base text-neutral-400">{post.category} Specialist, Tirupati Balaji Health Care Group</p>
                 </div>
               </div>
 
@@ -71,11 +71,11 @@ export default function BlogPostPage({ params }: Props) {
               <div className="prose prose-neutral max-w-none">
                 <p className="text-xl text-neutral-700 leading-relaxed font-medium mb-6">{post.excerpt}</p>
                 <p className="text-neutral-600 leading-relaxed mb-4">
-                  This article provides comprehensive insights on {post.title.toLowerCase()}, written by our expert {post.author} at Tirupoti Balaji Hospital.
+                  This article provides comprehensive insights on {post.title.toLowerCase()}, written by our expert {post.author} at Tirupati Balaji Health Care Group.
                   When the API is connected, the full article content will be rendered here from the CMS.
                 </p>
                 <p className="text-neutral-600 leading-relaxed mb-4">
-                  Our specialists at Tirupoti Balaji Hospital are committed to providing evidence-based, patient-friendly health information that helps you make informed decisions about your health and wellbeing.
+                  Our specialists at Tirupati Balaji Health Care Group are committed to providing evidence-based, patient-friendly health information that helps you make informed decisions about your health and wellbeing.
                 </p>
                 <div className="bg-primary-50 border border-primary-100 rounded-2xl p-5 my-6">
                   <p className="text-primary-700 font-semibold text-base">
@@ -127,7 +127,7 @@ export default function BlogPostPage({ params }: Props) {
               )}
 
               {/* Book CTA */}
-              <div className="bg-gradient-to-br from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
+              <div className="bg-gradient-to-br from-royal-600 to-royal-500 rounded-2xl p-6 text-white">
                 <h3 className="font-bold text-xl mb-2">Have health concerns?</h3>
                 <p className="text-white/80 text-base mb-4">Consult one of our expert doctors today.</p>
                 <Link

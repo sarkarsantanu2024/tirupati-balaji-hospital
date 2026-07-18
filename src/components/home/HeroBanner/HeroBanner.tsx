@@ -84,8 +84,8 @@ export default function HeroBanner({ slides }: HeroBannerProps) {
               )}
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-900/85 via-primary-800/60 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-royal-900/85 via-royal-800/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-royal-900/50 via-transparent to-transparent" />
 
               {/* Content */}
               <div className="absolute inset-0 flex items-center">

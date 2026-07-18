@@ -49,7 +49,7 @@ export default function DepartmentPage({ params }: Props) {
             <div className="lg:col-span-2">
               <div className="relative rounded-3xl overflow-hidden h-72 mb-8 shadow-card">
                 <Image src={dept.image} alt={dept.name} fill className="object-cover" sizes="(max-width:1024px) 100vw, 66vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-royal-900/50 to-transparent" />
                 <div className="absolute bottom-5 left-5 text-white">
                   <span className="material-symbols-outlined block mb-2" style={{ fontSize: 40 }}>{dept.icon}</span>
                   <h2 className="text-3xl font-extrabold">{dept.name}</h2>
@@ -57,7 +57,7 @@ export default function DepartmentPage({ params }: Props) {
               </div>
 
               <SectionLabel>About This Department</SectionLabel>
-              <h2 className="text-3xl font-extrabold text-neutral-800 mb-4">{dept.name} at Tirupoti Balaji Hospital</h2>
+              <h2 className="text-3xl font-extrabold text-neutral-800 mb-4">{dept.name} at Tirupati Balaji Health Care Group</h2>
               <p className="text-neutral-600 leading-relaxed mb-8">{dept.description}</p>
 
               {/* Features */}
@@ -107,7 +107,7 @@ export default function DepartmentPage({ params }: Props) {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Book Appointment */}
-              <div className="bg-gradient-to-br from-primary-600 to-secondary-500 rounded-2xl p-6 text-white">
+              <div className="bg-gradient-to-br from-royal-600 to-royal-500 rounded-2xl p-6 text-white">
                 <h3 className="font-bold text-xl mb-2">Book a Consultation</h3>
                 <p className="text-white/80 text-base mb-5">Speak with one of our {dept.name} specialists today.</p>
                 <Button href="/contact" variant="outline-white" size="sm">

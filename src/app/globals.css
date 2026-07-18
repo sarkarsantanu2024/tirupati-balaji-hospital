@@ -5,12 +5,12 @@
 
 /* ─── CSS Variables ──────────────────────────────────────────────────────────── */
 :root {
-  --primary: #0057A8;
-  --primary-light: #1a6fc4;
-  --primary-dark: #003d77;
-  --secondary: #009B8A;
-  --accent: #E8832A;
-  --accent-light: #f09548;
+  --primary: #C51D22;
+  --primary-light: #db4b4f;
+  --primary-dark: #8a1418;
+  --secondary: #7A1417;
+  --accent: #C51D22;
+  --accent-light: #db4b4f;
   --text-dark: #1E293B;
   --text-mid: #475569;
   --text-light: #94A3B8;
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background-image: linear-gradient(135deg, #252985 0%, #4f57ab 100%);
   }
 
   .btn-primary {

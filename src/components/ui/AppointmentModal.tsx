@@ -54,7 +54,7 @@ export default function AppointmentModal() {
       {/* Panel */}
       <div className="relative z-10 w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="bg-gradient-to-r from-primary-600 to-secondary-500 p-6 text-white">
+        <div className="bg-gradient-to-r from-royal-600 to-royal-500 p-6 text-white">
           <button
             onClick={closeModal}
             className="absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
@@ -186,7 +186,7 @@ export default function AppointmentModal() {
               type="submit"
               className={cn(
                 'w-full py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl',
-                'transition-all duration-300 hover:shadow-button text-base'
+                'transition-all duration-300 text-base'
               )}
             >
               Request Appointment
